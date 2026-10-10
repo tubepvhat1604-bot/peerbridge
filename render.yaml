@@ -28,7 +28,7 @@ services:
         value: openai
       - key: LLM_PROVIDER
         value: openai
-      # RAG: BM25 trên backend/data/courses/<course_id>/*.md, không cần Qdrant. Bản chạy thật dùng slide khóa AICB
+      # RAG: BM25 trên backend/data/courses/<course_id>/*.md, không cần Qdrant. Bản chạy thật dùng slide ngày 1–15 Phase 1 AI Thực Chiến
       # (không kèm repo, xem backend/data/courses/README.md); repo công khai mặc định dùng demo-course.
       - key: RETRIEVER_PROVIDER
         value: local

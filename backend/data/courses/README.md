@@ -4,7 +4,7 @@ Moderator phòng học tìm đoạn liên quan trong `data/courses/<course_id>/*
 "(Xem bài <tên file>, slide N)". Không cần vector DB hay embedding.
 
 - `demo-course/`: 3 bài ngắn tự viết (vòng lặp, đệ quy, độ phức tạp thuật toán) để chạy thử.
-- `aicb/`: bản chạy thật dùng slide giảng viên khóa AICB. Thư mục này **không kèm trong repo** vì nhóm không có quyền chia sẻ slide.
+- `aicb/`: bản chạy thật dùng slide bài giảng ngày 1–15, Phase 1 AI Thực Chiến. Thư mục này **không kèm trong repo** vì nhóm không có quyền chia sẻ slide.
 
 ## Dùng tài liệu của bạn
 

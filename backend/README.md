@@ -10,7 +10,7 @@ Cách chạy và biến môi trường: xem [README gốc](../README.md) và [`.
 | --- | --- |
 | `main.py`, `db.py`, `config.py`, `security.py` | Khởi động app, schema SQLite, cấu hình, JWT |
 | `routers/`, `services/`, `repositories/` | Đăng nhập, hồ sơ, ghép cặp, kết nối, phiên học, kế hoạch |
-| `onboarding/` | Danh mục concept (SQL, Python, 15 bài khóa AICB) và hồ sơ đã xác nhận |
+| `onboarding/` | Danh mục concept (SQL, Python, 15 bài Phase 1 AI Thực Chiến) và hồ sơ đã xác nhận |
 | `matching/`, `services/matching_engine.py`, `services/match_ai.py` | Điểm ghép cặp và AI xếp lại |
 | `agents/plan_coach/`, `services/plans.py`, `services/coach.py` | Kế hoạch tuần (LLM chia việc, code xếp lịch) và coach |
 | `checkin/` | Check-in bằng ảnh (AI Vision, LangGraph), lưu ảnh, báo bạn cặp |

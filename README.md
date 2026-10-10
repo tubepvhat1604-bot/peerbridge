@@ -64,8 +64,8 @@ kế hoạch dùng mẫu, phòng học dùng luật.
 
 ### Tài liệu cho RAG
 
-Repo này không kèm slide giảng viên khóa AICB vì nhóm không có quyền chia sẻ chúng. Nếu muốn AI phòng học trích nguồn từ tài liệu
-của bạn, xem [backend/data/courses/README.md](backend/data/courses/README.md).
+Bản chạy thật dùng slide bài giảng ngày 1 đến 15, Phase 1 chương trình AI Thực Chiến. Repo này không kèm các slide đó vì nhóm không
+có quyền chia sẻ. Nếu muốn AI phòng học trích nguồn từ tài liệu của bạn, xem [backend/data/courses/README.md](backend/data/courses/README.md).
 
 ## Kiểm thử
 
@@ -80,9 +80,9 @@ và kết quả đã lưu.
 
 ## Nhóm
 
-| Thành viên | Phần phụ trách |
-| --- | --- |
-| Tú | AI Vision (check-in ảnh), trang Tổng quan, vòng đo nhịp học và coach, chế độ demo, deploy |
-| Chính | Danh mục concept, onboarding, ghép cặp, đo tiến độ (Data 1) |
-| Sang | Kế hoạch tuần và coach (Data 2) |
-| Nhóm nền tảng | Khung giao diện, đăng nhập, kết nối, phòng học và moderator |
+| Thành viên | Vai trò | Phần phụ trách |
+| --- | --- | --- |
+| Hiệp | Người 1 · Nền tảng | Khung giao diện, đăng nhập, kết nối bạn học, phòng học và moderator |
+| Chính | Người 2 · AI Data 1 | Danh mục concept, onboarding, ghép cặp, đo tiến độ |
+| Sang | Người 3 · AI Data 2 | Kế hoạch tuần và coach |
+| Tú | AI Vision | Check-in bằng ảnh, trang Tổng quan, vòng đo nhịp học, chế độ demo, deploy |

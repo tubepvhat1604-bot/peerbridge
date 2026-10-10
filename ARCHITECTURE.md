@@ -24,7 +24,7 @@ Nguyên tắc chung:
 ### 1. Hồ sơ và ghép cặp
 
 - Hồ sơ gồm mục tiêu, điều cần hỗ trợ, điều giúp được, giờ rảnh (`routers/profiles.py`, `repositories/profiles.py`).
-- Danh mục concept chuẩn ở `data/concepts/catalog.json`: 30 SQL, 30 Python, 15 bài khóa AICB, có quan hệ tiên quyết (`onboarding/`).
+- Danh mục concept chuẩn ở `data/concepts/catalog.json`: 30 SQL, 30 Python, 15 bài Phase 1 AI Thực Chiến, có quan hệ tiên quyết (`onboarding/`).
 - Điểm ghép cặp tính bằng code: bài bổ trợ (mình cần, bạn giỏi), chủ đề chung, giờ rảnh trùng, mục tiêu gần nhau
   (`services/matching_engine.py`, `matching/`). Khi `MATCH_RERANK_ENABLED=true`, LLM xếp lại nhóm đầu và viết lý do
   (`services/match_ai.py`).
