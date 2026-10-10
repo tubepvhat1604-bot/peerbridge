@@ -1,6 +1,6 @@
 # Socratic Moderator — tài liệu tích hợp
 
-Dành cho **Người 1** (service layer, WebSocket, DB) và **Người 3** (frontend). Agent chỉ làm AI reasoning:
+Dành cho phần backend (service layer, WebSocket, DB) và frontend. Agent chỉ làm AI reasoning:
 nó **không** ghi DB, **không** gửi WebSocket, **không** có API. Mọi việc lưu trữ và gửi tin là của service layer.
 
 Flow: `Message → Classify Intent → Assess Integrity Risk → Choose Action → (GUIDE) RAG + Socratic guidance → Output guard`.
@@ -29,7 +29,7 @@ output, event = await moderate_message_with_event(payload)  # kèm bản ghi aud
   có thể raise `ValidationError` (message rỗng/quá 2000 ký tự, id không phải UUID) → hãy validate trước.
 - Gọi `warmup_moderator()` lúc startup, nếu không request đầu tiên sẽ chậm hàng chục giây vì nạp model E5.
 
-Ví dụ lifespan (Người 1 tự thêm vào `main.py`):
+Ví dụ lifespan (thêm vào `main.py`):
 
 ```python
 @asynccontextmanager
@@ -67,7 +67,7 @@ async def lifespan(app):
 ## 3. Hành vi backend đề xuất theo action
 
 Tên event đã chốt: `CHAT_MESSAGE`, `MODERATION_RESULT`, `GUIDANCE`, `WARNING`, `SESSION_STATUS`.
-Payload chi tiết của từng event do Người 1 quyết định; bảng chỉ nêu hành vi đề xuất.
+Payload chi tiết của từng event do backend quyết định; bảng chỉ nêu hành vi đề xuất.
 
 | Action | Tin của người gửi | Event / thao tác |
 |---|---|---|
@@ -90,7 +90,7 @@ errors[], llm_model, prompt_version, created_at (UTC)`.
 
 ## 4. HITL: hàng chờ và review
 
-Agent chỉ định nghĩa interface; Người 1 hiện thực bằng DB (`HITLQueue`), repo có `InMemoryHITLQueue` để test/demo.
+Agent chỉ định nghĩa interface; backend hiện thực bằng DB (`HITLQueue`), repo có `InMemoryHITLQueue` để test/demo.
 
 ```python
 class HITLQueue(Protocol):
