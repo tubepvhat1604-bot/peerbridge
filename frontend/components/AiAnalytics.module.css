@@ -1,0 +1,27 @@
+.range { display: flex; background: #eef1ef; border-radius: 10px; padding: 3px; }
+.range button { border: 0; background: none; padding: 7px 12px; border-radius: 8px; font: inherit; font-size: 13.5px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.range .on { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(24, 46, 38, .1); }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 18px; }
+.tile, .skel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; display: grid; gap: 6px; align-content: start; min-height: 120px; }
+.skel { background: linear-gradient(90deg, #eceeec, #f5f6f5, #eceeec); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+@keyframes shimmer { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+.tile small { font-size: 13px; color: var(--muted); font-weight: 500; }
+.tile b { font-size: 28px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.tile span { font-size: 12.5px; color: var(--muted); }
+.bar { height: 8px; border-radius: 99px; background: #e8ece8; overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--accent); }
+.grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+.grid h2 { font-size: 17px; font-weight: 600; margin: 0 0 14px; }
+.chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; padding-top: 8px; }
+.chart > div { flex: 1; min-width: 0; height: 100%; display: grid; grid-template-rows: 1fr auto auto; align-items: end; justify-items: center; gap: 4px; }
+.chart span { width: 100%; max-width: 36px; background: var(--accent); border-radius: 6px 6px 2px 2px; }
+.chart b { font-size: 12px; font-variant-numeric: tabular-nums; }
+.chart small { font-size: 11.5px; color: var(--muted); }
+.statuses { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 10px; }
+.statuses li { display: grid; grid-template-columns: 140px minmax(0, 1fr) 36px; gap: 10px; align-items: center; font-size: 13.5px; }
+.statuses li div { height: 8px; background: #e8ece8; border-radius: 99px; overflow: hidden; }
+.statuses li i { display: block; height: 100%; background: var(--mint-2); }
+.statuses b { text-align: right; font-variant-numeric: tabular-nums; }
+.note { color: var(--muted); font-size: 13.5px; margin: 0 0 14px; }
+.error { padding: 12px 14px; border-radius: 10px; background: #fff0ec; color: #8f2d16; }
+@media (max-width: 1000px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .grid { grid-template-columns: 1fr; } }

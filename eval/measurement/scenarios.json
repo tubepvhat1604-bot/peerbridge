@@ -1,0 +1,25 @@
+{
+  "authorship": "Synthetic agent-authored regression cases; expected outcomes specified independently of execution. No real learner outcome evidence.",
+  "scenarios": [
+    {"id":"both-on-pace","due":[100,100],"credit":[100,100],"expected_pacing":[1,1],"expected_score":1,"expected_gap":0},
+    {"id":"both-behind","due":[100,100],"credit":[40,40],"expected_pacing":[0.4,0.4],"expected_score":0.4,"expected_gap":0},
+    {"id":"a-behind","due":[100,100],"credit":[20,80],"expected_pacing":[0.2,0.8],"expected_score":0.2,"expected_gap":0.6},
+    {"id":"b-behind","due":[100,100],"credit":[100,50],"expected_pacing":[1,0.5],"expected_score":0.5,"expected_gap":0.5},
+    {"id":"no-due-a","due":[0,100],"credit":[0,50],"expected_pacing":[1,0.5],"expected_score":0.5,"expected_gap":0.5},
+    {"id":"future-only","due":[0,0],"credit":[0,0],"future_unfinished":true,"expected_pacing":[1,1],"expected_score":1,"expected_gap":0},
+    {"id":"overdue-incomplete","due":[100,100],"credit":[0,0],"overdue":true,"expected_pacing":[0,0],"expected_score":0,"expected_gap":0},
+    {"id":"duplicate-checkins","due":[100,100],"credit":[100,100],"duplicates":true,"expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_streak":1},
+    {"id":"sparse-checkins","due":[100,100],"credit":[0,0],"presence_days":[-4],"expected_pacing":[0,0],"expected_score":0,"expected_gap":0,"expected_streak":0,"expected_absent":[1,2]},
+    {"id":"consecutive-days","due":[100,100],"credit":[100,100],"presence_days":[-2,-1,0],"expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_streak":3},
+    {"id":"same-day-presence","due":[0,0],"credit":[0,0],"presence_days":[0,0,0],"expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_streak":1},
+    {"id":"cutoff-before","due":[0,0],"credit":[0,0],"presence_at":"2026-10-06T02:59:59+07:00","expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_streak":1,"expected_presence_date":"2026-10-05"},
+    {"id":"cutoff-exact","due":[0,0],"credit":[0,0],"presence_at":"2026-10-06T03:00:00+07:00","expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_streak":1,"expected_presence_date":"2026-10-06"},
+    {"id":"high-gap","due":[100,100],"credit":[90,20],"expected_pacing":[0.9,0.2],"expected_score":0.2,"expected_gap":0.7,"expected_gap_attention":true},
+    {"id":"low-gap","due":[100,100],"credit":[80,75],"expected_pacing":[0.8,0.75],"expected_score":0.75,"expected_gap":0.05,"expected_gap_attention":false},
+    {"id":"gap-boundary","due":[100,100],"credit":[100,70],"expected_pacing":[1,0.7],"expected_score":0.7,"expected_gap":0.3,"expected_gap_attention":false},
+    {"id":"ahead-uncapped","due":[100,100],"credit":[200,150],"expected_pacing":[2,1.5],"expected_score":1.5,"expected_gap":0.5},
+    {"id":"risk-two-day-boundary","due":[0,0],"credit":[0,0],"presence_days":[-2],"expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_absent":[1,2],"expected_risk_a":0.22142857142857142},
+    {"id":"risk-one-day-boundary","due":[0,0],"credit":[0,0],"presence_days":[-1],"expected_pacing":[1,1],"expected_score":1,"expected_gap":0,"expected_absent":[],"expected_risk_a":0.03571428571428571},
+    {"id":"risk-saturated-all-features","due":[100,100],"credit":[0,0],"presence_days":[-13,-12,-11,-10,-9,-8,-7],"risk_observations":true,"expected_pacing":[0,0],"expected_score":0,"expected_gap":0,"expected_risk_a":1}
+  ]
+}

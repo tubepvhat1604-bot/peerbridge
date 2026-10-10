@@ -1,0 +1,13 @@
+﻿pair_case,user_id,split,rater,goal_fit,feasibility,specificity,schedule_accuracy,if_then_accuracy,notes
+pair-01,101,development,,,,,,,
+pair-01,102,development,,,,,,,
+pair-02,103,development,,,,,,,
+pair-02,104,development,,,,,,,
+pair-04,107,development,,,,,,,
+pair-04,108,development,,,,,,,
+pair-05,109,development,,,,,,,
+pair-05,110,development,,,,,,,
+pair-06,111,development,,,,,,,
+pair-06,112,development,,,,,,,
+pair-07,113,development,,,,,,,
+pair-07,114,development,,,,,,,

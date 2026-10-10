@@ -1,0 +1,837 @@
+{
+ "catalog_version": "2026-10-06.1",
+ "concepts": [
+  {
+   "id": "sql.select_basic",
+   "track": "sql",
+   "prerequisites": [],
+   "action": "Viết 5 câu SELECT lấy các cột khác nhau từ một bảng",
+   "expected_output": "5 truy vấn và kết quả",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.where",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Viết 5 truy vấn lọc dòng bằng WHERE với AND, OR, IN, BETWEEN",
+   "expected_output": "5 truy vấn và giải thích điều kiện",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.order_by",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Sắp xếp kết quả theo 1 và 2 cột, tăng và giảm dần",
+   "expected_output": "4 truy vấn ORDER BY",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.distinct",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Lấy giá trị không trùng bằng DISTINCT trên 3 cột khác nhau",
+   "expected_output": "3 truy vấn và số dòng trả về",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.limit",
+   "track": "sql",
+   "prerequisites": [
+    "sql.order_by"
+   ],
+   "action": "Lấy top N bằng ORDER BY kết hợp LIMIT",
+   "expected_output": "3 truy vấn top N",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.aggregates",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Tính COUNT, SUM, AVG, MIN, MAX trên một bảng bán hàng",
+   "expected_output": "5 truy vấn tổng hợp",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.group_by",
+   "track": "sql",
+   "prerequisites": [
+    "sql.aggregates"
+   ],
+   "action": "Viết 3 truy vấn GROUP BY tính tổng theo nhóm",
+   "expected_output": "3 truy vấn và bảng kết quả",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.having",
+   "track": "sql",
+   "prerequisites": [
+    "sql.group_by"
+   ],
+   "action": "Lọc nhóm bằng HAVING sau GROUP BY",
+   "expected_output": "3 truy vấn HAVING",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.join",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+   "expected_output": "3 truy vấn JOIN và kết quả",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.left_join",
+   "track": "sql",
+   "prerequisites": [
+    "sql.join",
+    "sql.nulls"
+   ],
+   "action": "Viết 3 truy vấn LEFT JOIN, tìm dòng không khớp (NULL)",
+   "expected_output": "3 truy vấn và giải thích dòng NULL",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.join_keys",
+   "track": "sql",
+   "prerequisites": [
+    "sql.join"
+   ],
+   "action": "Xác định khóa nối và quan hệ 1-n, n-n giữa 3 bảng",
+   "expected_output": "Sơ đồ quan hệ và 2 truy vấn",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.self_join",
+   "track": "sql",
+   "prerequisites": [
+    "sql.join"
+   ],
+   "action": "Nối bảng với chính nó, ví dụ nhân viên và quản lý",
+   "expected_output": "2 truy vấn self join",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.union",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Gộp kết quả bằng UNION và UNION ALL, so sánh khác biệt",
+   "expected_output": "2 truy vấn và nhận xét",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.subquery",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where"
+   ],
+   "action": "Viết 3 truy vấn con trong WHERE và FROM",
+   "expected_output": "3 truy vấn lồng",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.correlated_subquery",
+   "track": "sql",
+   "prerequisites": [
+    "sql.subquery"
+   ],
+   "action": "Viết 2 truy vấn con tương quan",
+   "expected_output": "2 truy vấn và giải thích cách chạy",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.exists",
+   "track": "sql",
+   "prerequisites": [
+    "sql.subquery"
+   ],
+   "action": "Dùng EXISTS và NOT EXISTS để kiểm tra tồn tại",
+   "expected_output": "3 truy vấn EXISTS",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.cte",
+   "track": "sql",
+   "prerequisites": [
+    "sql.subquery"
+   ],
+   "action": "Viết lại một truy vấn lồng bằng WITH (CTE)",
+   "expected_output": "Truy vấn CTE và bản cũ để so sánh",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.case",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where"
+   ],
+   "action": "Phân loại dữ liệu bằng CASE WHEN",
+   "expected_output": "3 truy vấn CASE",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.nulls",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Xử lý giá trị NULL bằng IS NULL và COALESCE",
+   "expected_output": "4 truy vấn với NULL",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.string_functions",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Dùng hàm chuỗi: UPPER, SUBSTR, LENGTH, REPLACE",
+   "expected_output": "4 truy vấn xử lý chuỗi",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.date_functions",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where"
+   ],
+   "action": "Lọc và nhóm theo ngày, tháng bằng hàm ngày",
+   "expected_output": "3 truy vấn theo thời gian",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.casting",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Đổi kiểu dữ liệu bằng CAST trong 3 tình huống",
+   "expected_output": "3 truy vấn CAST",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.window_func",
+   "track": "sql",
+   "prerequisites": [
+    "sql.group_by"
+   ],
+   "action": "Tính tổng lũy kế bằng SUM() OVER (PARTITION BY ...)",
+   "expected_output": "2 truy vấn window",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.ranking",
+   "track": "sql",
+   "prerequisites": [
+    "sql.window_func"
+   ],
+   "action": "Xếp hạng bằng ROW_NUMBER, RANK, DENSE_RANK",
+   "expected_output": "3 truy vấn xếp hạng",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.window_frames",
+   "track": "sql",
+   "prerequisites": [
+    "sql.window_func"
+   ],
+   "action": "Tính trung bình trượt 3 ngày bằng ROWS BETWEEN",
+   "expected_output": "2 truy vấn window frame",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.insert",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Thêm dữ liệu bằng INSERT một dòng và nhiều dòng",
+   "expected_output": "Script INSERT chạy được",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.update",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where"
+   ],
+   "action": "Cập nhật dữ liệu có điều kiện bằng UPDATE",
+   "expected_output": "3 câu UPDATE và kiểm tra lại",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.delete",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where"
+   ],
+   "action": "Xóa dữ liệu có điều kiện, kiểm tra bằng SELECT trước",
+   "expected_output": "2 câu DELETE an toàn",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.table_constraints",
+   "track": "sql",
+   "prerequisites": [
+    "sql.select_basic"
+   ],
+   "action": "Tạo bảng với PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE",
+   "expected_output": "Script CREATE TABLE",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "sql.query_debugging",
+   "track": "sql",
+   "prerequisites": [
+    "sql.where",
+    "sql.join"
+   ],
+   "action": "Sửa 3 truy vấn lỗi: sai JOIN, sai GROUP BY, sai lọc",
+   "expected_output": "3 truy vấn đã sửa và nguyên nhân",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "py.basic",
+   "track": "python",
+   "prerequisites": [],
+   "action": "Cài Python, chạy chương trình in lời chào và nhận dữ liệu nhập",
+   "expected_output": "File .py chạy được",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.variables",
+   "track": "python",
+   "prerequisites": [
+    "py.basic"
+   ],
+   "action": "Viết chương trình nhập tên, năm sinh và tính tuổi",
+   "expected_output": "File Python và 3 lần chạy thử",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.types",
+   "track": "python",
+   "prerequisites": [
+    "py.variables"
+   ],
+   "action": "Thử int, float, str, bool và đổi kiểu qua lại",
+   "expected_output": "Ghi chú 5 phép đổi kiểu",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.operators",
+   "track": "python",
+   "prerequisites": [
+    "py.types"
+   ],
+   "action": "Viết máy tính đơn giản với + - * / // % **",
+   "expected_output": "Chương trình máy tính",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.strings",
+   "track": "python",
+   "prerequisites": [
+    "py.types"
+   ],
+   "action": "Ghép chuỗi, f-string và định dạng số",
+   "expected_output": "4 ví dụ xử lý chuỗi",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.string_methods",
+   "track": "python",
+   "prerequisites": [
+    "py.strings"
+   ],
+   "action": "Chuẩn hóa họ tên bằng strip, title, split, join",
+   "expected_output": "Hàm chuẩn hóa tên",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.lists",
+   "track": "python",
+   "prerequisites": [
+    "py.variables"
+   ],
+   "action": "Làm 10 bài với list: thêm, xóa, tìm, đếm",
+   "expected_output": "File bài tập list",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.tuples",
+   "track": "python",
+   "prerequisites": [
+    "py.lists"
+   ],
+   "action": "Dùng tuple để trả nhiều giá trị và unpack",
+   "expected_output": "3 ví dụ tuple",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.dictionaries",
+   "track": "python",
+   "prerequisites": [
+    "py.types"
+   ],
+   "action": "Đếm số lần xuất hiện từ trong câu bằng dict",
+   "expected_output": "Chương trình đếm từ",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.sets",
+   "track": "python",
+   "prerequisites": [
+    "py.lists"
+   ],
+   "action": "Tìm phần tử chung, khác nhau giữa 2 danh sách bằng set",
+   "expected_output": "3 bài với set",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.indexing_slicing",
+   "track": "python",
+   "prerequisites": [
+    "py.lists",
+    "py.strings"
+   ],
+   "action": "Cắt chuỗi và list bằng chỉ số, đảo ngược, lấy bước",
+   "expected_output": "6 ví dụ slicing",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.conditions",
+   "track": "python",
+   "prerequisites": [
+    "py.operators"
+   ],
+   "action": "Phân loại điểm học lực bằng if/elif/else",
+   "expected_output": "Chương trình xếp loại",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.for_loop",
+   "track": "python",
+   "prerequisites": [
+    "py.lists"
+   ],
+   "action": "Dùng for tính tổng, trung bình và lọc số chẵn",
+   "expected_output": "3 bài vòng lặp for",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.while_loop",
+   "track": "python",
+   "prerequisites": [
+    "py.conditions"
+   ],
+   "action": "Viết trò đoán số dùng while",
+   "expected_output": "Trò chơi đoán số",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.functions",
+   "track": "python",
+   "prerequisites": [
+    "py.basic"
+   ],
+   "action": "Tách chương trình thành 3 hàm có tên rõ ràng",
+   "expected_output": "File có 3 hàm",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.parameters",
+   "track": "python",
+   "prerequisites": [
+    "py.functions"
+   ],
+   "action": "Viết hàm có tham số mặc định và tham số theo tên",
+   "expected_output": "3 hàm và ví dụ gọi",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.return_values",
+   "track": "python",
+   "prerequisites": [
+    "py.functions"
+   ],
+   "action": "Viết hàm trả kết quả thay vì in ra, rồi dùng kết quả",
+   "expected_output": "3 hàm có return",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.scope",
+   "track": "python",
+   "prerequisites": [
+    "py.functions",
+    "py.variables"
+   ],
+   "action": "Thử biến cục bộ và toàn cục, giải thích lỗi thường gặp",
+   "expected_output": "Ghi chú và 2 ví dụ",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.comprehensions",
+   "track": "python",
+   "prerequisites": [
+    "py.for_loop",
+    "py.dictionaries"
+   ],
+   "action": "Viết lại 3 vòng for bằng list và dict comprehension",
+   "expected_output": "3 cặp code trước/sau",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.exceptions",
+   "track": "python",
+   "prerequisites": [
+    "py.conditions"
+   ],
+   "action": "Bắt lỗi nhập sai bằng try/except",
+   "expected_output": "Chương trình không bị dừng khi nhập sai",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.file_io",
+   "track": "python",
+   "prerequisites": [
+    "py.strings",
+    "py.exceptions"
+   ],
+   "action": "Đọc file văn bản, đếm dòng và ghi kết quả ra file mới",
+   "expected_output": "Script đọc/ghi file",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.json",
+   "track": "python",
+   "prerequisites": [
+    "py.dictionaries",
+    "py.modules"
+   ],
+   "action": "Đọc và ghi danh sách sinh viên dạng JSON",
+   "expected_output": "File JSON và script",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.modules",
+   "track": "python",
+   "prerequisites": [
+    "py.functions"
+   ],
+   "action": "Tách code thành 2 module và import qua lại",
+   "expected_output": "2 file .py import nhau",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.packages",
+   "track": "python",
+   "prerequisites": [
+    "py.modules",
+    "py.venv"
+   ],
+   "action": "Cài một thư viện bằng pip và dùng thử",
+   "expected_output": "Script dùng thư viện vừa cài",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.venv",
+   "track": "python",
+   "prerequisites": [
+    "py.basic"
+   ],
+   "action": "Tạo môi trường ảo, cài gói và xuất requirements.txt",
+   "expected_output": "requirements.txt",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.debugging",
+   "track": "python",
+   "prerequisites": [
+    "py.functions",
+    "py.exceptions"
+   ],
+   "action": "Tìm và sửa 3 lỗi trong chương trình bằng print và debugger",
+   "expected_output": "Code đã sửa và nguyên nhân",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.tests",
+   "track": "python",
+   "prerequisites": [
+    "py.return_values"
+   ],
+   "action": "Viết 3 test cho một hàm bằng assert hoặc pytest",
+   "expected_output": "File test chạy xanh",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "py.iterators",
+   "track": "python",
+   "prerequisites": [
+    "py.for_loop",
+    "py.tuples"
+   ],
+   "action": "Dùng enumerate, zip, range trong 3 bài",
+   "expected_output": "3 bài dùng hàm lặp",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.sorting",
+   "track": "python",
+   "prerequisites": [
+    "py.lists",
+    "py.functions"
+   ],
+   "action": "Sắp xếp danh sách sinh viên theo điểm bằng sorted và key",
+   "expected_output": "Chương trình sắp xếp",
+   "est_minutes": 30,
+   "resource_ids": []
+  },
+  {
+   "id": "py.dates",
+   "track": "python",
+   "prerequisites": [
+    "py.modules",
+    "py.strings"
+   ],
+   "action": "Tính số ngày đến hạn nộp bài bằng datetime",
+   "expected_output": "Chương trình đếm ngày",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.llm_foundation",
+   "track": "ai",
+   "prerequisites": [],
+   "action": "Đọc bài Nền tảng AI và LLM, tự giải thích token, context window và temperature bằng ví dụ của mình",
+   "expected_output": "Ghi chú 1 trang và 3 câu hỏi còn vướng",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.business_problem",
+   "track": "ai",
+   "prerequisites": [
+    "ai.llm_foundation"
+   ],
+   "action": "Đọc bài Xác định bài toán kinh doanh cho AI, chọn một bài toán thật và xếp mức tự động hóa phù hợp",
+   "expected_output": "Phiếu mô tả bài toán và mức tự động hóa",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.react_agent",
+   "track": "ai",
+   "prerequisites": [
+    "ai.llm_foundation"
+   ],
+   "action": "Đọc bài Từ Chatbot đến Agent, vẽ vòng Thought - Action - Observation cho một agent đơn giản",
+   "expected_output": "Sơ đồ vòng ReAct và 1 ví dụ chạy tay",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.prompt_tool_calling",
+   "track": "ai",
+   "prerequisites": [
+    "ai.llm_foundation"
+   ],
+   "action": "Đọc bài Prompt Engineering và Tool Calling, viết system prompt theo Role / Task / Context / Format và khai báo một tool schema",
+   "expected_output": "System prompt và tool schema JSON",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.harness",
+   "track": "ai",
+   "prerequisites": [
+    "ai.prompt_tool_calling"
+   ],
+   "action": "Đọc bài Context · Loop · Harness Engineering, liệt kê context, vòng lặp và harness của một agent bạn đã dùng",
+   "expected_output": "Bảng context, vòng lặp, harness của agent",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.product_thinking",
+   "track": "ai",
+   "prerequisites": [
+    "ai.business_problem"
+   ],
+   "action": "Đọc bài Tư duy sản phẩm AI, viết PRD 1 trang cho một tính năng AI: người dùng, vấn đề, tiêu chí thành công",
+   "expected_output": "PRD 1 trang",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.product_management",
+   "track": "ai",
+   "prerequisites": [
+    "ai.product_thinking"
+   ],
+   "action": "Đọc bài Quản lý sản phẩm và dự án AI, lập milestone và danh sách rủi ro cho dự án AI của nhóm",
+   "expected_output": "Bảng milestone và rủi ro",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.data_foundations",
+   "track": "ai",
+   "prerequisites": [
+    "ai.llm_foundation"
+   ],
+   "action": "Đọc bài Data Foundations, chia một tài liệu thành chunk theo 2 cách và so sánh kết quả tìm kiếm",
+   "expected_output": "Bảng so sánh 2 cách chunking",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.rag_pipeline",
+   "track": "ai",
+   "prerequisites": [
+    "ai.data_foundations"
+   ],
+   "action": "Đọc bài RAG Pipeline, vẽ luồng truy xuất - sinh câu trả lời và viết prompt bắt AI trích nguồn",
+   "expected_output": "Sơ đồ RAG và prompt có trích nguồn",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.multi_agent",
+   "track": "ai",
+   "prerequisites": [
+    "ai.react_agent"
+   ],
+   "action": "Đọc bài Multi-Agent, thiết kế 2 agent phối hợp bằng LangGraph và ghi rõ agent nào làm gì",
+   "expected_output": "Sơ đồ graph 2 agent",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.data_pipeline",
+   "track": "ai",
+   "prerequisites": [
+    "ai.data_foundations"
+   ],
+   "action": "Đọc bài Data Pipeline, liệt kê các điểm pipeline nạp tài liệu có thể hỏng và cách phát hiện sớm",
+   "expected_output": "Checklist kiểm tra pipeline",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.guardrails",
+   "track": "ai",
+   "prerequisites": [
+    "ai.react_agent"
+   ],
+   "action": "Đọc bài Guardrails, thêm guardrail đầu vào, đầu ra và điểm cần người duyệt cho một agent",
+   "expected_output": "Bảng guardrail và điểm HITL",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.deployment",
+   "track": "ai",
+   "prerequisites": [
+    "ai.react_agent"
+   ],
+   "action": "Đọc bài Deployment, đưa một agent mẫu lên cloud và ghi lại từng bước, biến môi trường cần có",
+   "expected_output": "URL chạy được và ghi chú các bước",
+   "est_minutes": 60,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.monitoring",
+   "track": "ai",
+   "prerequisites": [
+    "ai.deployment"
+   ],
+   "action": "Đọc bài Monitoring, thêm log và 3 chỉ số theo dõi cho agent đã deploy",
+   "expected_output": "Log mẫu và 3 chỉ số theo dõi",
+   "est_minutes": 45,
+   "resource_ids": []
+  },
+  {
+   "id": "ai.evaluation",
+   "track": "ai",
+   "prerequisites": [
+    "ai.llm_foundation"
+   ],
+   "action": "Đọc bài AI Evaluation, dựng bộ 10 câu hỏi đánh giá và chấm agent theo rubric",
+   "expected_output": "Bộ test 10 câu và bảng điểm",
+   "est_minutes": 60,
+   "resource_ids": []
+  }
+ ],
+ "resources": {}
+}

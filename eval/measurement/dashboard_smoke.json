@@ -1,0 +1,10 @@
+{
+  "streamlit_version": "1.65.0",
+  "checks_passed": 3,
+  "checks": [
+    "stored synthetic snapshot rendered",
+    "attention filter rendered",
+    "missing DB fails without creation"
+  ],
+  "production_data_used": false
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#4A2D8F">
+  <title>Check-in demo · PeerBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/checkin-demo/static/checkin.css">
+</head>
+<body>
+  <div class="devbar" role="region" aria-label="Chế độ demo">
+    <span>Demo: đang xem với tư cách</span>
+    <select id="devUser" aria-label="Chọn người dùng"></select>
+    <button type="button" id="resetDemo">Làm lại dữ liệu demo</button>
+  </div>
+
+  <main class="page" id="app" aria-live="polite">
+    <header class="top">
+      <h1 class="pair-names" id="pairNames">Đang tải…</h1>
+      <p class="streak" id="streak" hidden></p>
+    </header>
+
+    <!-- Ảnh mới nhất của bạn học: phần chính của trang -->
+    <section class="hero" id="hero" aria-label="Check-in mới nhất của bạn học"></section>
+
+    <section class="progress" id="progress" aria-label="Tiến độ tuần này"></section>
+
+    <section class="mine" id="mine" aria-label="Check-in của bạn"></section>
+
+    <section class="history" id="historyWrap" hidden>
+      <h2>Nhật ký của hai bạn</h2>
+      <ol class="history-grid" id="history"></ol>
+    </section>
+  </main>
+
+  <nav class="dock" aria-label="Thao tác chính">
+    <button class="nudge" id="nudgeBtn" type="button" hidden>Nhắc bạn</button>
+    <button class="shutter" id="checkinBtn" type="button" aria-haspopup="dialog">
+      <span class="shutter-ring" aria-hidden="true"></span>
+      <span class="shutter-label">Check-in</span>
+    </button>
+    <span class="dock-spacer" aria-hidden="true"></span>
+  </nav>
+
+  <!-- Bảng gửi check-in -->
+  <dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+    <form method="dialog" class="sheet-inner" id="sheetForm">
+      <div class="sheet-head">
+        <h2 id="sheetTitle">Check-in buổi học</h2>
+        <button class="icon-btn" value="cancel" aria-label="Đóng">✕</button>
+      </div>
+
+      <div class="drop" id="drop">
+        <img id="preview" alt="Ảnh check-in sẽ gửi" hidden>
+        <div class="drop-empty" id="dropEmpty">
+          <button type="button" class="btn primary" id="pickBtn">Chụp hoặc chọn ảnh</button>
+          <p class="hint desktop-only">Trên máy tính: chụp màn hình rồi dán vào đây (Ctrl/⌘ + V)</p>
+        </div>
+      </div>
+      <input type="file" id="fileInput" accept="image/*" hidden>
+
+      <label class="field">
+        <span>Ghi chú <em>(không bắt buộc)</em></span>
+        <textarea id="note" rows="2" maxlength="300" placeholder="Ví dụ: vướng LEFT JOIN chỗ dòng NULL"></textarea>
+      </label>
+
+      <p class="error" id="sheetError" role="alert" hidden></p>
+
+      <div class="sheet-actions">
+        <button type="button" class="btn ghost" id="textOnlyBtn">Không tiện chụp? Gửi ghi chú</button>
+        <button type="button" class="btn primary" id="sendBtn" disabled>Gửi check-in</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script>window.PB_EMOJIS = ["🔥", "👏", "💪", "😮", "❤️"];</script>
+  <script src="/checkin-demo/static/checkin.js" defer></script>
+</body>
+</html>

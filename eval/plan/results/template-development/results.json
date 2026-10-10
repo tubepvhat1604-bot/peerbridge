@@ -1,0 +1,1060 @@
+{
+  "ran_at": "2026-10-06T08:15:07.862170+00:00",
+  "mode": "template",
+  "synthetic": true,
+  "splits": {
+    "development": 7
+  },
+  "prompt_version": "plan-coach-planner-v1",
+  "prompt_sha256": "92efe6e97d1111c4c2f0adead30b369e3d89051baba2fd612fbd450ca9999f7f",
+  "dataset_sha256": "c7f1a9c01b0072914d967dfebef6441b805b9d4a5677edf0562a5f91365ab81f",
+  "pair_cases": 7,
+  "personas": 14,
+  "accepted": 6,
+  "rejected": 1,
+  "hard_pass_among_accepted": 6,
+  "initial_generation_errors": 0,
+  "repaired_successfully": 0,
+  "partial_plans": 3,
+  "partial_pair_cases": 3,
+  "accepted_personal_plans": 12,
+  "partial_personal_plans": 3,
+  "generated_pair_cases": 6,
+  "rejected_before_generation": 1,
+  "rejection_codes": {
+    "UNKNOWN_PREREQUISITE": 1
+  },
+  "rates": {
+    "rejection_pair_rate": 0.14285714285714285,
+    "initial_generation_error_rate": 0.0,
+    "partial_pair_rate": 0.5,
+    "partial_personal_plan_rate": 0.25,
+    "hard_pass_among_accepted_rate": 1.0
+  },
+  "human_rating_count": 0,
+  "llm_judge_count": 0,
+  "human_rubric_average": null,
+  "llm_judge_average": null,
+  "quality_target": 4.0,
+  "quality_target_verified": false,
+  "results": [
+    {
+      "id": "pair-01",
+      "split": "development",
+      "case": "normal",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": false,
+      "trace": {
+        "trace_id": "42b2eb0c-e509-4dda-8cc5-50b6c7b01c43",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.8,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.815
+      },
+      "output": {
+        "pair_id": 1,
+        "plans": [
+          {
+            "user_id": 101,
+            "pair_id": 1,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 101,
+                "concept_id": "sql.select",
+                "action": "Viết 5 câu SELECT trên bảng students",
+                "expected_output": "File chứa 5 câu truy vấn và kết quả",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "27a93141-c822-4d45-bded-fec584baef2e",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu SELECT trên bảng students (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 101,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "39527923-1dca-4cf9-ac26-98326f1cbabd",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu truy vấn lọc bằng WHERE (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 101,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "357b3240-2a80-46b8-aef2-847529914749",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Ghép hai bảng bằng 3 câu INNER JOIN (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          },
+          {
+            "user_id": 102,
+            "pair_id": 1,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 102,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "072fcb27-30ae-4731-b134-7c00eb063f4d",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 102,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "f804a48d-9eb6-471b-9674-659ee6c32f66",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 102,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "283431a1-a2f0-461e-b7ec-d86b06ad6534",
+                "pair_id": 1,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    },
+    {
+      "id": "pair-02",
+      "split": "development",
+      "case": "little_time",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": true,
+      "trace": {
+        "trace_id": "4dac6173-e81d-4e85-851b-2b4da3f8a0f6",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.256,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.265
+      },
+      "output": {
+        "pair_id": 2,
+        "plans": [
+          {
+            "user_id": 103,
+            "pair_id": 2,
+            "plan_version": 1,
+            "items": [],
+            "deferred_items": [
+              {
+                "user_id": 103,
+                "concept_id": "sql.select",
+                "action": "Viết 5 câu SELECT trên bảng students",
+                "expected_output": "File chứa 5 câu truy vấn và kết quả",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "fffc0c96-8ce3-47f5-8f53-9140c02ad1d2",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "NO_FITTING_SLOT_OR_BUDGET",
+                "completed_at": null
+              },
+              {
+                "user_id": 103,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "2ad9f096-d259-44f5-bd93-30c2f24355eb",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "PREREQUISITE_DEFERRED",
+                "completed_at": null
+              },
+              {
+                "user_id": 103,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "21986d0e-0833-47a1-b43e-d1909c52a706",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "PREREQUISITE_DEFERRED",
+                "completed_at": null
+              }
+            ],
+            "partial": true,
+            "warnings": [
+              {
+                "code": "PARTIAL_PLAN",
+                "message": "Một phần mục tiêu chưa được xếp trong khoảng lập kế hoạch; xem mục để sau.",
+                "user_id": 103,
+                "concept_id": null,
+                "item_id": null
+              },
+              {
+                "code": "NO_FEASIBLE_SCHEDULE",
+                "message": "Không có khung/ngân sách đủ cho việc 30–90 phút và tiên quyết.",
+                "user_id": 103,
+                "concept_id": null,
+                "item_id": null
+              }
+            ]
+          },
+          {
+            "user_id": 104,
+            "pair_id": 2,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 104,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "f81fd553-925f-488f-a64b-80740fd98e5f",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 104,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "5070dddc-1bb3-4da4-9d7b-625b4e0eb639",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 104,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "b566842a-8292-4516-b89b-16ebf8e96daa",
+                "pair_id": 2,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    },
+    {
+      "id": "pair-03",
+      "split": "development",
+      "case": "missing_prerequisite",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": false,
+      "hard_constraints_passed": false,
+      "partial": false,
+      "errors": [
+        {
+          "code": "UNKNOWN_PREREQUISITE",
+          "message": "Missing prerequisite sql.missing",
+          "user_id": null,
+          "concept_id": "sql.where",
+          "item_id": null
+        }
+      ]
+    },
+    {
+      "id": "pair-04",
+      "split": "development",
+      "case": "no_shared_time",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": false,
+      "trace": {
+        "trace_id": "df0535d5-2deb-4226-91c9-1dac56ec976f",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.222,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.228
+      },
+      "output": {
+        "pair_id": 4,
+        "plans": [
+          {
+            "user_id": 107,
+            "pair_id": 4,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 107,
+                "concept_id": "sql.select",
+                "action": "Viết 5 câu SELECT trên bảng students",
+                "expected_output": "File chứa 5 câu truy vấn và kết quả",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "863bbc93-3f09-46bf-9543-07df2bcaefe4",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu SELECT trên bảng students (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 107,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "091ba163-55b0-4bbb-8228-deeaae27dac4",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu truy vấn lọc bằng WHERE (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 107,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "564d78cf-6c55-44cc-bd81-108a5f7b6974",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Ghép hai bảng bằng 3 câu INNER JOIN (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          },
+          {
+            "user_id": 108,
+            "pair_id": 4,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 108,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "03f730cb-034d-4378-aaae-93758f83412e",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T02:00:00Z",
+                "scheduled_end": "2030-01-07T02:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 09:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 108,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "ef9b69d6-46ef-4c85-8a47-49878cff7b8f",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T02:00:00Z",
+                "scheduled_end": "2030-01-08T02:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 09:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 108,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "75e2eead-f5bc-4544-8ad9-38360261405f",
+                "pair_id": 4,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T02:00:00Z",
+                "scheduled_end": "2030-01-09T03:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 09:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    },
+    {
+      "id": "pair-05",
+      "split": "development",
+      "case": "impossible_deadline",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": true,
+      "trace": {
+        "trace_id": "c9701175-435b-498b-a449-03c02fa7b43e",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.223,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.23
+      },
+      "output": {
+        "pair_id": 5,
+        "plans": [
+          {
+            "user_id": 109,
+            "pair_id": 5,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 109,
+                "concept_id": "sql.select",
+                "action": "Viết 5 câu SELECT trên bảng students",
+                "expected_output": "File chứa 5 câu truy vấn và kết quả",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "4ea98900-9ff5-436b-932e-45030a183abe",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu SELECT trên bảng students (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [
+              {
+                "user_id": 109,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "858b8b0a-9b2e-472a-82d4-9fbafcd21a8a",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "NO_FITTING_SLOT_OR_BUDGET",
+                "completed_at": null
+              },
+              {
+                "user_id": 109,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "b5da1af6-2875-4227-9505-bcd812b8863e",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "PREREQUISITE_DEFERRED",
+                "completed_at": null
+              }
+            ],
+            "partial": true,
+            "warnings": [
+              {
+                "code": "PARTIAL_PLAN",
+                "message": "Một phần mục tiêu chưa được xếp trong khoảng lập kế hoạch; xem mục để sau.",
+                "user_id": 109,
+                "concept_id": null,
+                "item_id": null
+              }
+            ]
+          },
+          {
+            "user_id": 110,
+            "pair_id": 5,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 110,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "2fcabf87-ade9-46a4-a95e-5102338f3d7a",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 110,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "f85d1fb3-9a71-4d46-93f8-510c25b3d61f",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 110,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "a5fe29c3-8dd7-4fed-b985-866db130d4ea",
+                "pair_id": 5,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    },
+    {
+      "id": "pair-06",
+      "split": "development",
+      "case": "late",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": true,
+      "trace": {
+        "trace_id": "35e819a1-7ae6-4e86-8a5c-85cbd18b46b6",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.235,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.243
+      },
+      "output": {
+        "pair_id": 6,
+        "plans": [
+          {
+            "user_id": 111,
+            "pair_id": 6,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 111,
+                "concept_id": "sql.select",
+                "action": "Viết 5 câu SELECT trên bảng students",
+                "expected_output": "File chứa 5 câu truy vấn và kết quả",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "229c1485-91e0-4757-b857-eeadbf4e9629",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu SELECT trên bảng students (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 111,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "919e8ed0-b13c-4d73-b9ae-7e2f056c3ef7",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu truy vấn lọc bằng WHERE (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [
+              {
+                "user_id": 111,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "b3a9f6f5-e13f-46d6-acbe-01f065231aef",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "DEFERRED",
+                "scheduled_start": null,
+                "scheduled_end": null,
+                "slot_id": null,
+                "if_then_text": null,
+                "defer_reason": "NO_FITTING_SLOT_OR_BUDGET",
+                "completed_at": null
+              }
+            ],
+            "partial": true,
+            "warnings": [
+              {
+                "code": "PARTIAL_PLAN",
+                "message": "Một phần mục tiêu chưa được xếp trong khoảng lập kế hoạch; xem mục để sau.",
+                "user_id": 111,
+                "concept_id": null,
+                "item_id": null
+              }
+            ]
+          },
+          {
+            "user_id": 112,
+            "pair_id": 6,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 112,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "a1b0777b-4f4e-4e14-8bc3-1f671ddcb6d6",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 112,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "cdd145c1-5057-420f-afb7-3b305cd62fe5",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 112,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "d34dc278-d669-4371-b19c-d207b4cbb87d",
+                "pair_id": 6,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    },
+    {
+      "id": "pair-07",
+      "split": "development",
+      "case": "normal",
+      "provider_mode": "template",
+      "synthetic": true,
+      "accepted": true,
+      "hard_constraints_passed": true,
+      "partial": false,
+      "trace": {
+        "trace_id": "c69ba919-9eef-4b18-aebb-c2bb9e7b92b9",
+        "prompt_version": "plan-coach-planner-v1",
+        "model": "catalog-template-v1",
+        "provider_mode": "template",
+        "attempts": [
+          {
+            "attempt": 1,
+            "latency_ms": 0.151,
+            "errors": [],
+            "usage": null,
+            "cost": null
+          }
+        ],
+        "repairs": 0,
+        "catalog_source": "synthetic_demo",
+        "latency_ms": 0.156
+      },
+      "output": {
+        "pair_id": 7,
+        "plans": [
+          {
+            "user_id": 113,
+            "pair_id": 7,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 113,
+                "concept_id": "sql.where",
+                "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+                "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "7421acdf-9aca-40a4-a8ad-262c99bb20e7",
+                "pair_id": 7,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:45:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết 5 câu truy vấn lọc bằng WHERE (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 113,
+                "concept_id": "sql.join",
+                "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+                "expected_output": "3 truy vấn JOIN và bảng kết quả",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "a5bc0b7b-755c-4c58-ad48-a42132e4848e",
+                "pair_id": 7,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T13:00:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Ghép hai bảng bằng 3 câu INNER JOIN (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          },
+          {
+            "user_id": 114,
+            "pair_id": 7,
+            "plan_version": 1,
+            "items": [
+              {
+                "user_id": 114,
+                "concept_id": "python.variables",
+                "action": "Viết chương trình nhập tên và tính tuổi",
+                "expected_output": "File Python và 3 lần chạy thử",
+                "est_minutes": 30,
+                "resource_ids": [],
+                "id": "a48d36a1-e7ca-4f71-a84c-3c13e30f7235",
+                "pair_id": 7,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-07T12:00:00Z",
+                "scheduled_end": "2030-01-07T12:30:00Z",
+                "slot_id": "slot-0@2030-01-07",
+                "if_then_text": "Nếu 07/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình nhập tên và tính tuổi (30 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 114,
+                "concept_id": "python.conditions",
+                "action": "Viết chương trình phân loại điểm bằng if/else",
+                "expected_output": "File Python với 5 trường hợp kiểm thử",
+                "est_minutes": 45,
+                "resource_ids": [],
+                "id": "136d766a-1d2c-4831-8f4c-50fef6d143ac",
+                "pair_id": 7,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-08T12:00:00Z",
+                "scheduled_end": "2030-01-08T12:45:00Z",
+                "slot_id": "slot-1@2030-01-08",
+                "if_then_text": "Nếu 08/01/2030 lúc 19:00 tại Góc học tập của tôi thì Viết chương trình phân loại điểm bằng if/else (45 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              },
+              {
+                "user_id": 114,
+                "concept_id": "python.loops",
+                "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+                "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+                "est_minutes": 60,
+                "resource_ids": [],
+                "id": "3c3a05db-9c98-497e-a702-a4f3ed3ff0e0",
+                "pair_id": 7,
+                "plan_version": 1,
+                "status": "SCHEDULED",
+                "scheduled_start": "2030-01-09T12:00:00Z",
+                "scheduled_end": "2030-01-09T13:00:00Z",
+                "slot_id": "slot-2@2030-01-09",
+                "if_then_text": "Nếu 09/01/2030 lúc 19:00 tại Góc học tập của tôi thì Dùng vòng lặp tính tổng và lọc số chẵn (60 phút).",
+                "defer_reason": null,
+                "completed_at": null
+              }
+            ],
+            "deferred_items": [],
+            "partial": false,
+            "warnings": []
+          }
+        ],
+        "warnings": [],
+        "peer_sessions": [],
+        "peer_session_reason": "OPTIONAL_NOT_REQUESTED"
+      }
+    }
+  ]
+}

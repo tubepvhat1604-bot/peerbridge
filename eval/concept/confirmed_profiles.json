@@ -1,0 +1,459 @@
+[
+  {
+    "contract_version": "data1.v1",
+    "catalog_version": "2026-10-06.1",
+    "user_id": 1,
+    "revision": 1,
+    "status": "confirmed",
+    "onboarding": {
+      "learning_goal": "Học SQL để xin thực tập phân tích dữ liệu",
+      "deadline": "2026-11-15",
+      "topics": [
+        {
+          "text": "JOIN",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        {
+          "text": "Python dict",
+          "domain": "python",
+          "role": "offer",
+          "self_level": "strong"
+        }
+      ],
+      "committed_weekly_hours": 5,
+      "availability": [
+        {
+          "day_of_week": 1,
+          "start_time": "19:00:00",
+          "end_time": "20:30:00",
+          "timezone": "Asia/Ho_Chi_Minh"
+        }
+      ],
+      "conscientiousness": 0.7,
+      "procrastination": 0.6,
+      "communication_style": "gentle",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "mappings": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "JOIN",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        "resolved_domain": "sql",
+        "concept_id": "sql.join",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "Python dict",
+          "domain": "python",
+          "role": "offer",
+          "self_level": "strong"
+        },
+        "resolved_domain": "python",
+        "concept_id": "py.dictionaries",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "unmapped": [],
+    "user_concepts": [
+      {
+        "user_id": 1,
+        "concept_id": "py.dictionaries",
+        "role": "offer",
+        "self_level": "strong",
+        "theta": 1,
+        "n_attempts": 0
+      },
+      {
+        "user_id": 1,
+        "concept_id": "sql.join",
+        "role": "need",
+        "self_level": "unknown",
+        "theta": -1,
+        "n_attempts": 0
+      }
+    ],
+    "confirmed_at": "2026-10-06T00:00:00Z"
+  },
+  {
+    "contract_version": "data1.v1",
+    "catalog_version": "2026-10-06.1",
+    "user_id": 2,
+    "revision": 1,
+    "status": "confirmed",
+    "onboarding": {
+      "learning_goal": "Học Python cơ bản",
+      "deadline": null,
+      "topics": [
+        {
+          "text": "Python cơ bản",
+          "domain": "python",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        {
+          "text": "GROUP BY",
+          "domain": "sql",
+          "role": "offer",
+          "self_level": "strong"
+        }
+      ],
+      "committed_weekly_hours": 4,
+      "availability": [
+        {
+          "day_of_week": 3,
+          "start_time": "19:00:00",
+          "end_time": "20:00:00",
+          "timezone": "Asia/Ho_Chi_Minh"
+        }
+      ],
+      "conscientiousness": 0.8,
+      "procrastination": 0.3,
+      "communication_style": "direct",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "mappings": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "Python cơ bản",
+          "domain": "python",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        "resolved_domain": "python",
+        "concept_id": "py.basic",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "GROUP BY",
+          "domain": "sql",
+          "role": "offer",
+          "self_level": "strong"
+        },
+        "resolved_domain": "sql",
+        "concept_id": "sql.group_by",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "unmapped": [],
+    "user_concepts": [
+      {
+        "user_id": 2,
+        "concept_id": "py.basic",
+        "role": "need",
+        "self_level": "unknown",
+        "theta": -1,
+        "n_attempts": 0
+      },
+      {
+        "user_id": 2,
+        "concept_id": "sql.group_by",
+        "role": "offer",
+        "self_level": "strong",
+        "theta": 1,
+        "n_attempts": 0
+      }
+    ],
+    "confirmed_at": "2026-10-06T00:00:00Z"
+  },
+  {
+    "contract_version": "data1.v1",
+    "catalog_version": "2026-10-06.1",
+    "user_id": 3,
+    "revision": 1,
+    "status": "confirmed",
+    "onboarding": {
+      "learning_goal": "Thực hành truy vấn SQL",
+      "deadline": "2026-12-01",
+      "topics": [
+        {
+          "text": "hàm cửa sổ",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "learning"
+        },
+        {
+          "text": "truy vấn con",
+          "domain": "sql",
+          "role": "offer",
+          "self_level": "strong"
+        }
+      ],
+      "committed_weekly_hours": 6,
+      "availability": [
+        {
+          "day_of_week": 2,
+          "start_time": "18:00:00",
+          "end_time": "20:00:00",
+          "timezone": "Asia/Ho_Chi_Minh"
+        }
+      ],
+      "conscientiousness": null,
+      "procrastination": null,
+      "communication_style": "",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "mappings": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "hàm cửa sổ",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "learning"
+        },
+        "resolved_domain": "sql",
+        "concept_id": "sql.window_func",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "truy vấn con",
+          "domain": "sql",
+          "role": "offer",
+          "self_level": "strong"
+        },
+        "resolved_domain": "sql",
+        "concept_id": "sql.subquery",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "unmapped": [],
+    "user_concepts": [
+      {
+        "user_id": 3,
+        "concept_id": "sql.subquery",
+        "role": "offer",
+        "self_level": "strong",
+        "theta": 1,
+        "n_attempts": 0
+      },
+      {
+        "user_id": 3,
+        "concept_id": "sql.window_func",
+        "role": "need",
+        "self_level": "learning",
+        "theta": 0,
+        "n_attempts": 0
+      }
+    ],
+    "confirmed_at": "2026-10-06T00:00:00Z"
+  },
+  {
+    "contract_version": "data1.v1",
+    "catalog_version": "2026-10-06.1",
+    "user_id": 4,
+    "revision": 1,
+    "status": "confirmed",
+    "onboarding": {
+      "learning_goal": "Viết chương trình Python xử lý dữ liệu JSON",
+      "deadline": "2026-11-20",
+      "topics": [
+        {
+          "text": "Python JSON",
+          "domain": "python",
+          "role": "need",
+          "self_level": "learning"
+        },
+        {
+          "text": "định nghĩa hàm",
+          "domain": "python",
+          "role": "offer",
+          "self_level": "strong"
+        }
+      ],
+      "committed_weekly_hours": 3,
+      "availability": [
+        {
+          "day_of_week": 5,
+          "start_time": "09:00:00",
+          "end_time": "10:30:00",
+          "timezone": "Asia/Ho_Chi_Minh"
+        }
+      ],
+      "conscientiousness": 0.5,
+      "procrastination": 0.7,
+      "communication_style": "flexible",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "mappings": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "Python JSON",
+          "domain": "python",
+          "role": "need",
+          "self_level": "learning"
+        },
+        "resolved_domain": "python",
+        "concept_id": "py.json",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "định nghĩa hàm",
+          "domain": "python",
+          "role": "offer",
+          "self_level": "strong"
+        },
+        "resolved_domain": "python",
+        "concept_id": "py.functions",
+        "confidence": 1,
+        "reason": "user_confirmed",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "unmapped": [],
+    "user_concepts": [
+      {
+        "user_id": 4,
+        "concept_id": "py.functions",
+        "role": "offer",
+        "self_level": "strong",
+        "theta": 1,
+        "n_attempts": 0
+      },
+      {
+        "user_id": 4,
+        "concept_id": "py.json",
+        "role": "need",
+        "self_level": "learning",
+        "theta": 0,
+        "n_attempts": 0
+      }
+    ],
+    "confirmed_at": "2026-10-06T00:00:00Z"
+  },
+  {
+    "contract_version": "data1.v1",
+    "catalog_version": "2026-10-06.1",
+    "user_id": 5,
+    "revision": 1,
+    "status": "confirmed",
+    "onboarding": {
+      "learning_goal": "Học theo bài lab và ôn tiếng Anh",
+      "deadline": null,
+      "topics": [
+        {
+          "text": "Lab 123",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        {
+          "text": "IELTS writing",
+          "domain": null,
+          "role": "need",
+          "self_level": "learning"
+        }
+      ],
+      "committed_weekly_hours": 2,
+      "availability": [],
+      "conscientiousness": null,
+      "procrastination": null,
+      "communication_style": "",
+      "timezone": "Asia/Ho_Chi_Minh"
+    },
+    "mappings": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "Lab 123",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        "resolved_domain": "sql",
+        "concept_id": null,
+        "confidence": 0,
+        "reason": "user_unmapped",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "IELTS writing",
+          "domain": null,
+          "role": "need",
+          "self_level": "learning"
+        },
+        "resolved_domain": null,
+        "concept_id": null,
+        "confidence": 0,
+        "reason": "user_unmapped",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "unmapped": [
+      {
+        "topic_index": 0,
+        "topic": {
+          "text": "Lab 123",
+          "domain": "sql",
+          "role": "need",
+          "self_level": "unknown"
+        },
+        "resolved_domain": "sql",
+        "concept_id": null,
+        "confidence": 0,
+        "reason": "user_unmapped",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      },
+      {
+        "topic_index": 1,
+        "topic": {
+          "text": "IELTS writing",
+          "domain": null,
+          "role": "need",
+          "self_level": "learning"
+        },
+        "resolved_domain": null,
+        "concept_id": null,
+        "confidence": 0,
+        "reason": "user_unmapped",
+        "candidates": [],
+        "backend": "synthetic_fixture"
+      }
+    ],
+    "user_concepts": [],
+    "confirmed_at": "2026-10-06T00:00:00Z"
+  }
+]

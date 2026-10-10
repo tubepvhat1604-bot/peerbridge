@@ -1,0 +1,142 @@
+[
+  {
+    "learning_goal": "Học SQL để xin thực tập phân tích dữ liệu",
+    "deadline": "2026-11-15",
+    "topics": [
+      {
+        "text": "JOIN",
+        "domain": "sql",
+        "role": "need",
+        "self_level": "unknown"
+      },
+      {
+        "text": "Python dict",
+        "domain": "python",
+        "role": "offer",
+        "self_level": "strong"
+      }
+    ],
+    "committed_weekly_hours": 5,
+    "availability": [
+      {
+        "day_of_week": 1,
+        "start_time": "19:00",
+        "end_time": "20:30",
+        "timezone": "Asia/Ho_Chi_Minh"
+      }
+    ],
+    "conscientiousness": 0.7,
+    "procrastination": 0.6,
+    "communication_style": "gentle"
+  },
+  {
+    "learning_goal": "Học Python cơ bản",
+    "deadline": null,
+    "topics": [
+      {
+        "text": "Python cơ bản",
+        "domain": "python",
+        "role": "need",
+        "self_level": "unknown"
+      },
+      {
+        "text": "GROUP BY",
+        "domain": "sql",
+        "role": "offer",
+        "self_level": "strong"
+      }
+    ],
+    "committed_weekly_hours": 4,
+    "availability": [
+      {
+        "day_of_week": 3,
+        "start_time": "19:00",
+        "end_time": "20:00"
+      }
+    ],
+    "conscientiousness": 0.8,
+    "procrastination": 0.3,
+    "communication_style": "direct"
+  },
+  {
+    "learning_goal": "Thực hành truy vấn SQL",
+    "deadline": "2026-12-01",
+    "topics": [
+      {
+        "text": "hàm cửa sổ",
+        "domain": "sql",
+        "role": "need",
+        "self_level": "learning"
+      },
+      {
+        "text": "truy vấn con",
+        "domain": "sql",
+        "role": "offer",
+        "self_level": "strong"
+      }
+    ],
+    "committed_weekly_hours": 6,
+    "availability": [
+      {
+        "day_of_week": 2,
+        "start_time": "18:00",
+        "end_time": "20:00"
+      }
+    ],
+    "conscientiousness": null,
+    "procrastination": null,
+    "communication_style": ""
+  },
+  {
+    "learning_goal": "Viết chương trình Python xử lý dữ liệu JSON",
+    "deadline": "2026-11-20",
+    "topics": [
+      {
+        "text": "Python JSON",
+        "domain": "python",
+        "role": "need",
+        "self_level": "learning"
+      },
+      {
+        "text": "định nghĩa hàm",
+        "domain": "python",
+        "role": "offer",
+        "self_level": "strong"
+      }
+    ],
+    "committed_weekly_hours": 3,
+    "availability": [
+      {
+        "day_of_week": 5,
+        "start_time": "09:00",
+        "end_time": "10:30"
+      }
+    ],
+    "conscientiousness": 0.5,
+    "procrastination": 0.7,
+    "communication_style": "flexible"
+  },
+  {
+    "learning_goal": "Học theo bài lab và ôn tiếng Anh",
+    "deadline": null,
+    "topics": [
+      {
+        "text": "Lab 123",
+        "domain": "sql",
+        "role": "need",
+        "self_level": "unknown"
+      },
+      {
+        "text": "IELTS writing",
+        "domain": null,
+        "role": "need",
+        "self_level": "learning"
+      }
+    ],
+    "committed_weekly_hours": 2,
+    "availability": [],
+    "conscientiousness": null,
+    "procrastination": null,
+    "communication_style": ""
+  }
+]

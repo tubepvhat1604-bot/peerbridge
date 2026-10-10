@@ -1,0 +1,11 @@
+{
+  "name": "peerbridge-api-client-tests",
+  "private": true,
+  "scripts": {
+    "test": "node --test *.test.cjs"
+  },
+  "devDependencies": {
+    "react": "19.2.1",
+    "react-test-renderer": "19.2.1"
+  }
+}

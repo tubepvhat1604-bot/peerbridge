@@ -1,0 +1,30 @@
+{"topic":"JOIN","domain":"sql","expected":"sql.join"}
+{"topic":"học nối bảng","domain":"sql","expected":"sql.join"}
+{"topic":"Lab 5: truy vấn nhiều bảng","domain":"sql","expected":"sql.join"}
+{"topic":"lọc dữ liệu","domain":"sql","expected":"sql.where"}
+{"topic":"ORDER BY","domain":"sql","expected":"sql.order_by"}
+{"topic":"nhóm dữ liệu","domain":"sql","expected":"sql.group_by"}
+{"topic":"HAVING","domain":"sql","expected":"sql.having"}
+{"topic":"LEFT JOIN","domain":"sql","expected":"sql.left_join"}
+{"topic":"truy vấn con tương quan","domain":"sql","expected":"sql.correlated_subquery"}
+{"topic":"CTE","domain":"sql","expected":"sql.cte"}
+{"topic":"CASE WHEN","domain":"sql","expected":"sql.case"}
+{"topic":"giá trị thiếu","domain":"sql","expected":"sql.nulls"}
+{"topic":"OVER PARTITION BY","domain":"sql","expected":"sql.window_func"}
+{"topic":"ROW_NUMBER","domain":"sql","expected":"sql.ranking"}
+{"topic":"khóa ngoại","domain":"sql","expected":"sql.table_constraints"}
+{"topic":"Python cơ bản","domain":"python","expected":"py.basic"}
+{"topic":"biến Python","domain":"python","expected":"py.variables"}
+{"topic":"Python dict","domain":"python","expected":"py.dictionaries"}
+{"topic":"vòng lặp for","domain":"python","expected":"py.for_loop"}
+{"topic":"try except","domain":"python","expected":"py.exceptions"}
+{"topic":"định nghĩa hàm","domain":"python","expected":"py.functions"}
+{"topic":"list comprehension","domain":"python","expected":"py.comprehensions"}
+{"topic":"đọc ghi tệp","domain":"python","expected":"py.file_io"}
+{"topic":"Python slicing","domain":"python","expected":"py.indexing_slicing"}
+{"topic":"IELTS writing","domain":"sql","expected":null}
+{"topic":"neural networks","domain":"python","expected":null}
+{"topic":"JOIN GROUP BY","domain":"sql","expected":null}
+{"topic":"JOIN","domain":"python","expected":null}
+{"topic":"for range","domain":"sql","expected":null}
+{"topic":"course chapter 99","domain":"python","expected":null}

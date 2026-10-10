@@ -1,0 +1,2 @@
+# Optional internal dashboard only; core backend requirements stay unchanged.
+streamlit>=1.40,<2

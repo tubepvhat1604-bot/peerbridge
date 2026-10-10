@@ -1,0 +1,49 @@
+{
+  "synthetic": true,
+  "unique_personas": 20,
+  "development_personas": 14,
+  "holdout_personas": 6,
+  "first_run_at": "2026-10-06T08:15:07.862170+00:00",
+  "last_run_at": "2026-10-06T08:15:23.739896+00:00",
+  "prompt_version": "plan-coach-planner-v1",
+  "prompt_sha256": "92efe6e97d1111c4c2f0adead30b369e3d89051baba2fd612fbd450ca9999f7f",
+  "accepted_outputs_revalidated": true,
+  "by_mode": {
+    "template": {
+      "pair_cases": 10,
+      "accepted_pairs": 9,
+      "rejected_pairs": 1,
+      "rejection_rate": 0.1,
+      "accepted_personal_plans": 18,
+      "hard_pass_personal_plans": 18,
+      "partial_personal_plans": 6,
+      "partial_personal_plan_rate": 0.3333333333333333,
+      "partial_pair_cases": 6,
+      "generated_pairs": 9,
+      "initial_generation_errors": 0,
+      "initial_generation_error_rate": 0.0,
+      "repaired_successfully": 0
+    },
+    "fake": {
+      "pair_cases": 10,
+      "accepted_pairs": 9,
+      "rejected_pairs": 1,
+      "rejection_rate": 0.1,
+      "accepted_personal_plans": 18,
+      "hard_pass_personal_plans": 18,
+      "partial_personal_plans": 6,
+      "partial_personal_plan_rate": 0.3333333333333333,
+      "partial_pair_cases": 6,
+      "generated_pairs": 9,
+      "initial_generation_errors": 9,
+      "initial_generation_error_rate": 1.0,
+      "repaired_successfully": 9
+    }
+  },
+  "human_rating_count": 0,
+  "llm_judge_count": 0,
+  "human_rubric_average": null,
+  "llm_judge_average": null,
+  "quality_target_verified": false,
+  "interpretation": "Synthetic template/fake only. Fake errors are injected, not a live LLM error rate. No human scores or causal claims."
+}

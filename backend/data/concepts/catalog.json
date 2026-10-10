@@ -1,0 +1,1114 @@
+{
+  "catalog_version": "2026-10-06.1",
+  "concepts": [
+    {
+      "id": "sql.select_basic",
+      "domain": "sql",
+      "name": "SELECT basics",
+      "description": "Select named columns from one table and distinguish rows from columns.",
+      "prerequisites": [],
+      "aliases": [
+        "SELECT",
+        "select columns",
+        "truy vấn cơ bản",
+        "chọn cột"
+      ]
+    },
+    {
+      "id": "sql.where",
+      "domain": "sql",
+      "name": "Filtering rows",
+      "description": "Use WHERE and comparison predicates to filter rows.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "WHERE",
+        "filter rows",
+        "lọc dữ liệu",
+        "điều kiện lọc"
+      ]
+    },
+    {
+      "id": "sql.order_by",
+      "domain": "sql",
+      "name": "Sorting results",
+      "description": "Sort query results with ORDER BY and ascending or descending order.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "ORDER BY",
+        "sort results",
+        "sắp xếp kết quả"
+      ]
+    },
+    {
+      "id": "sql.distinct",
+      "domain": "sql",
+      "name": "Unique results",
+      "description": "Use DISTINCT to remove duplicate result rows.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "DISTINCT",
+        "unique rows",
+        "loại trùng"
+      ]
+    },
+    {
+      "id": "sql.limit",
+      "domain": "sql",
+      "name": "Limiting results",
+      "description": "Limit the number of result rows and understand ordering before limiting.",
+      "prerequisites": [
+        "sql.order_by"
+      ],
+      "aliases": [
+        "LIMIT",
+        "TOP",
+        "limit rows",
+        "giới hạn số dòng"
+      ]
+    },
+    {
+      "id": "sql.aggregates",
+      "domain": "sql",
+      "name": "Aggregate functions",
+      "description": "Compute COUNT, SUM, AVG, MIN and MAX over a set of rows.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "aggregate functions",
+        "COUNT SUM AVG",
+        "hàm tổng hợp"
+      ]
+    },
+    {
+      "id": "sql.group_by",
+      "domain": "sql",
+      "name": "Grouping rows",
+      "description": "Group rows and compute an aggregate for each group.",
+      "prerequisites": [
+        "sql.aggregates"
+      ],
+      "aliases": [
+        "GROUP BY",
+        "grouping rows",
+        "nhóm dữ liệu",
+        "gom nhóm"
+      ]
+    },
+    {
+      "id": "sql.having",
+      "domain": "sql",
+      "name": "Filtering groups",
+      "description": "Filter grouped aggregate results with HAVING.",
+      "prerequisites": [
+        "sql.group_by"
+      ],
+      "aliases": [
+        "HAVING",
+        "filter groups",
+        "lọc nhóm"
+      ]
+    },
+    {
+      "id": "sql.join",
+      "domain": "sql",
+      "name": "Inner joins",
+      "description": "Combine rows from two tables using INNER JOIN and a join condition.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "JOIN",
+        "INNER JOIN",
+        "nối bảng",
+        "truy vấn nhiều bảng"
+      ]
+    },
+    {
+      "id": "sql.left_join",
+      "domain": "sql",
+      "name": "Left joins",
+      "description": "Keep every left-table row when related right-table rows may be missing.",
+      "prerequisites": [
+        "sql.join",
+        "sql.nulls"
+      ],
+      "aliases": [
+        "LEFT JOIN",
+        "left outer join",
+        "nối trái"
+      ]
+    },
+    {
+      "id": "sql.join_keys",
+      "domain": "sql",
+      "name": "Join keys and cardinality",
+      "description": "Choose join keys and diagnose duplicate rows from one-to-many relationships.",
+      "prerequisites": [
+        "sql.join"
+      ],
+      "aliases": [
+        "join keys",
+        "join cardinality",
+        "khóa nối",
+        "quan hệ một nhiều"
+      ]
+    },
+    {
+      "id": "sql.self_join",
+      "domain": "sql",
+      "name": "Self joins",
+      "description": "Join a table to itself using aliases for hierarchical or comparative queries.",
+      "prerequisites": [
+        "sql.join"
+      ],
+      "aliases": [
+        "SELF JOIN",
+        "join table to itself",
+        "tự nối bảng"
+      ]
+    },
+    {
+      "id": "sql.union",
+      "domain": "sql",
+      "name": "Combining result sets",
+      "description": "Combine compatible query results with UNION or UNION ALL.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "UNION",
+        "UNION ALL",
+        "hợp kết quả"
+      ]
+    },
+    {
+      "id": "sql.subquery",
+      "domain": "sql",
+      "name": "Subqueries",
+      "description": "Use a nested SELECT as an input to an outer query.",
+      "prerequisites": [
+        "sql.where"
+      ],
+      "aliases": [
+        "subquery",
+        "nested query",
+        "truy vấn con"
+      ]
+    },
+    {
+      "id": "sql.correlated_subquery",
+      "domain": "sql",
+      "name": "Correlated subqueries",
+      "description": "Understand a subquery that refers to columns from its outer query.",
+      "prerequisites": [
+        "sql.subquery"
+      ],
+      "aliases": [
+        "correlated subquery",
+        "truy vấn con tương quan"
+      ]
+    },
+    {
+      "id": "sql.exists",
+      "domain": "sql",
+      "name": "Existence checks",
+      "description": "Use EXISTS and NOT EXISTS to check for related rows.",
+      "prerequisites": [
+        "sql.subquery"
+      ],
+      "aliases": [
+        "EXISTS",
+        "NOT EXISTS",
+        "kiểm tra tồn tại"
+      ]
+    },
+    {
+      "id": "sql.cte",
+      "domain": "sql",
+      "name": "Common table expressions",
+      "description": "Name an intermediate query using WITH to organize a query.",
+      "prerequisites": [
+        "sql.subquery"
+      ],
+      "aliases": [
+        "CTE",
+        "WITH query",
+        "common table expression",
+        "biểu thức bảng chung"
+      ]
+    },
+    {
+      "id": "sql.case",
+      "domain": "sql",
+      "name": "Conditional expressions",
+      "description": "Build conditional result values with CASE WHEN.",
+      "prerequisites": [
+        "sql.where"
+      ],
+      "aliases": [
+        "CASE WHEN",
+        "conditional SQL",
+        "biểu thức điều kiện"
+      ]
+    },
+    {
+      "id": "sql.nulls",
+      "domain": "sql",
+      "name": "Missing values",
+      "description": "Use IS NULL and COALESCE and understand SQL three-valued logic.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "NULL",
+        "IS NULL",
+        "COALESCE",
+        "giá trị thiếu"
+      ]
+    },
+    {
+      "id": "sql.string_functions",
+      "domain": "sql",
+      "name": "SQL string functions",
+      "description": "Transform and combine text with basic SQL string functions.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "SQL string functions",
+        "CONCAT SQL",
+        "SUBSTRING SQL",
+        "hàm chuỗi SQL"
+      ]
+    },
+    {
+      "id": "sql.date_functions",
+      "domain": "sql",
+      "name": "SQL date functions",
+      "description": "Extract, compare and calculate with dates in SQL.",
+      "prerequisites": [
+        "sql.where"
+      ],
+      "aliases": [
+        "SQL date functions",
+        "SQL dates",
+        "hàm ngày SQL"
+      ]
+    },
+    {
+      "id": "sql.casting",
+      "domain": "sql",
+      "name": "Type conversion",
+      "description": "Convert SQL values between compatible types with CAST.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "CAST",
+        "type conversion SQL",
+        "chuyển kiểu SQL"
+      ]
+    },
+    {
+      "id": "sql.window_func",
+      "domain": "sql",
+      "name": "Window functions",
+      "description": "Compute values over partitions while retaining individual result rows.",
+      "prerequisites": [
+        "sql.group_by"
+      ],
+      "aliases": [
+        "window functions",
+        "OVER PARTITION BY",
+        "hàm cửa sổ"
+      ]
+    },
+    {
+      "id": "sql.ranking",
+      "domain": "sql",
+      "name": "Window ranking",
+      "description": "Rank rows with ROW_NUMBER, RANK and DENSE_RANK.",
+      "prerequisites": [
+        "sql.window_func"
+      ],
+      "aliases": [
+        "ROW_NUMBER",
+        "DENSE_RANK",
+        "RANK SQL",
+        "xếp hạng SQL"
+      ]
+    },
+    {
+      "id": "sql.window_frames",
+      "domain": "sql",
+      "name": "Window frames",
+      "description": "Control a window frame to compute running or moving aggregates.",
+      "prerequisites": [
+        "sql.window_func"
+      ],
+      "aliases": [
+        "window frame",
+        "running total SQL",
+        "ROWS BETWEEN",
+        "tổng lũy kế SQL"
+      ]
+    },
+    {
+      "id": "sql.insert",
+      "domain": "sql",
+      "name": "Inserting rows",
+      "description": "Add rows with INSERT and specify the target columns.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "INSERT",
+        "insert rows",
+        "thêm dòng"
+      ]
+    },
+    {
+      "id": "sql.update",
+      "domain": "sql",
+      "name": "Updating rows",
+      "description": "Change rows using UPDATE and a deliberate WHERE condition.",
+      "prerequisites": [
+        "sql.where"
+      ],
+      "aliases": [
+        "UPDATE",
+        "update rows",
+        "cập nhật dòng"
+      ]
+    },
+    {
+      "id": "sql.delete",
+      "domain": "sql",
+      "name": "Deleting rows",
+      "description": "Delete selected rows using DELETE and understand the effect of WHERE.",
+      "prerequisites": [
+        "sql.where"
+      ],
+      "aliases": [
+        "DELETE",
+        "delete rows",
+        "xóa dòng"
+      ]
+    },
+    {
+      "id": "sql.table_constraints",
+      "domain": "sql",
+      "name": "Table constraints",
+      "description": "Define primary keys, foreign keys and uniqueness constraints.",
+      "prerequisites": [
+        "sql.select_basic"
+      ],
+      "aliases": [
+        "primary key",
+        "foreign key",
+        "table constraints",
+        "khóa chính",
+        "khóa ngoại"
+      ]
+    },
+    {
+      "id": "sql.query_debugging",
+      "domain": "sql",
+      "name": "Debugging queries",
+      "description": "Diagnose query errors and unexpected row counts using small examples.",
+      "prerequisites": [
+        "sql.where",
+        "sql.join"
+      ],
+      "aliases": [
+        "debug SQL",
+        "query debugging",
+        "sửa lỗi truy vấn"
+      ]
+    },
+    {
+      "id": "py.basic",
+      "domain": "python",
+      "name": "Python basics",
+      "description": "Run a small Python script and understand statements and indentation.",
+      "prerequisites": [],
+      "aliases": [
+        "Python basics",
+        "Python cơ bản",
+        "chạy Python",
+        "Python introduction"
+      ]
+    },
+    {
+      "id": "py.variables",
+      "domain": "python",
+      "name": "Variables",
+      "description": "Assign and update variable values with meaningful names.",
+      "prerequisites": [
+        "py.basic"
+      ],
+      "aliases": [
+        "Python variables",
+        "biến Python",
+        "gán biến"
+      ]
+    },
+    {
+      "id": "py.types",
+      "domain": "python",
+      "name": "Basic types",
+      "description": "Distinguish integer, float, boolean and string values and convert simple types.",
+      "prerequisites": [
+        "py.variables"
+      ],
+      "aliases": [
+        "Python types",
+        "kiểu dữ liệu Python",
+        "int float bool"
+      ]
+    },
+    {
+      "id": "py.operators",
+      "domain": "python",
+      "name": "Operators",
+      "description": "Use arithmetic, comparison and boolean operators in expressions.",
+      "prerequisites": [
+        "py.types"
+      ],
+      "aliases": [
+        "Python operators",
+        "toán tử Python"
+      ]
+    },
+    {
+      "id": "py.strings",
+      "domain": "python",
+      "name": "Strings",
+      "description": "Create strings and format values using f-strings.",
+      "prerequisites": [
+        "py.types"
+      ],
+      "aliases": [
+        "Python strings",
+        "f-string",
+        "chuỗi Python"
+      ]
+    },
+    {
+      "id": "py.string_methods",
+      "domain": "python",
+      "name": "String methods",
+      "description": "Use split, strip, replace and join on Python strings.",
+      "prerequisites": [
+        "py.strings"
+      ],
+      "aliases": [
+        "Python string methods",
+        "split strip replace",
+        "string join",
+        "xử lý chuỗi Python"
+      ]
+    },
+    {
+      "id": "py.lists",
+      "domain": "python",
+      "name": "Lists",
+      "description": "Create lists and add, remove or update list elements.",
+      "prerequisites": [
+        "py.variables"
+      ],
+      "aliases": [
+        "Python lists",
+        "danh sách Python",
+        "list append"
+      ]
+    },
+    {
+      "id": "py.tuples",
+      "domain": "python",
+      "name": "Tuples",
+      "description": "Use immutable tuples and unpack their values.",
+      "prerequisites": [
+        "py.lists"
+      ],
+      "aliases": [
+        "Python tuples",
+        "tuple unpacking",
+        "bộ dữ liệu Python"
+      ]
+    },
+    {
+      "id": "py.dictionaries",
+      "domain": "python",
+      "name": "Dictionaries",
+      "description": "Store and retrieve key-value pairs in a dictionary.",
+      "prerequisites": [
+        "py.types"
+      ],
+      "aliases": [
+        "Python dictionaries",
+        "Python dict",
+        "từ điển Python"
+      ]
+    },
+    {
+      "id": "py.sets",
+      "domain": "python",
+      "name": "Sets",
+      "description": "Use sets to remove duplicates and compare collections.",
+      "prerequisites": [
+        "py.lists"
+      ],
+      "aliases": [
+        "Python sets",
+        "tập hợp Python"
+      ]
+    },
+    {
+      "id": "py.indexing_slicing",
+      "domain": "python",
+      "name": "Indexing and slicing",
+      "description": "Select elements and slices from strings and sequences.",
+      "prerequisites": [
+        "py.lists",
+        "py.strings"
+      ],
+      "aliases": [
+        "Python slicing",
+        "Python indexing",
+        "cắt lát",
+        "truy cập chỉ số"
+      ]
+    },
+    {
+      "id": "py.conditions",
+      "domain": "python",
+      "name": "Conditional execution",
+      "description": "Use if, elif and else to choose a branch.",
+      "prerequisites": [
+        "py.operators"
+      ],
+      "aliases": [
+        "Python if else",
+        "Python conditions",
+        "rẽ nhánh Python"
+      ]
+    },
+    {
+      "id": "py.for_loop",
+      "domain": "python",
+      "name": "For loops",
+      "description": "Iterate over a sequence with for and range.",
+      "prerequisites": [
+        "py.lists"
+      ],
+      "aliases": [
+        "Python for loop",
+        "for range",
+        "vòng lặp for"
+      ]
+    },
+    {
+      "id": "py.while_loop",
+      "domain": "python",
+      "name": "While loops",
+      "description": "Repeat operations with while and terminate safely.",
+      "prerequisites": [
+        "py.conditions"
+      ],
+      "aliases": [
+        "Python while loop",
+        "vòng lặp while"
+      ]
+    },
+    {
+      "id": "py.functions",
+      "domain": "python",
+      "name": "Defining functions",
+      "description": "Define and call reusable Python functions.",
+      "prerequisites": [
+        "py.basic"
+      ],
+      "aliases": [
+        "Python functions",
+        "def function",
+        "định nghĩa hàm",
+        "hàm Python"
+      ]
+    },
+    {
+      "id": "py.parameters",
+      "domain": "python",
+      "name": "Function parameters",
+      "description": "Pass positional and keyword arguments and use default parameter values.",
+      "prerequisites": [
+        "py.functions"
+      ],
+      "aliases": [
+        "Python parameters",
+        "keyword arguments",
+        "tham số hàm"
+      ]
+    },
+    {
+      "id": "py.return_values",
+      "domain": "python",
+      "name": "Return values",
+      "description": "Return values from functions and distinguish return from print.",
+      "prerequisites": [
+        "py.functions"
+      ],
+      "aliases": [
+        "Python return",
+        "return values",
+        "giá trị trả về"
+      ]
+    },
+    {
+      "id": "py.scope",
+      "domain": "python",
+      "name": "Variable scope",
+      "description": "Distinguish local and module-level variable scope.",
+      "prerequisites": [
+        "py.functions",
+        "py.variables"
+      ],
+      "aliases": [
+        "Python scope",
+        "local global variables",
+        "phạm vi biến"
+      ]
+    },
+    {
+      "id": "py.comprehensions",
+      "domain": "python",
+      "name": "Comprehensions",
+      "description": "Build lists and dictionaries with simple comprehensions.",
+      "prerequisites": [
+        "py.for_loop",
+        "py.dictionaries"
+      ],
+      "aliases": [
+        "list comprehension",
+        "dict comprehension",
+        "Python comprehensions"
+      ]
+    },
+    {
+      "id": "py.exceptions",
+      "domain": "python",
+      "name": "Handling exceptions",
+      "description": "Handle expected errors with try, except and finally.",
+      "prerequisites": [
+        "py.conditions"
+      ],
+      "aliases": [
+        "Python exceptions",
+        "try except",
+        "xử lý ngoại lệ"
+      ]
+    },
+    {
+      "id": "py.file_io",
+      "domain": "python",
+      "name": "Reading and writing files",
+      "description": "Read and write text files using a context manager.",
+      "prerequisites": [
+        "py.strings",
+        "py.exceptions"
+      ],
+      "aliases": [
+        "Python file I/O",
+        "read write files Python",
+        "đọc ghi tệp"
+      ]
+    },
+    {
+      "id": "py.json",
+      "domain": "python",
+      "name": "JSON data",
+      "description": "Serialize and parse JSON data with Python's standard library.",
+      "prerequisites": [
+        "py.dictionaries",
+        "py.modules"
+      ],
+      "aliases": [
+        "Python JSON",
+        "json loads dumps",
+        "đọc JSON"
+      ]
+    },
+    {
+      "id": "py.modules",
+      "domain": "python",
+      "name": "Modules and imports",
+      "description": "Import functions and organize code into modules.",
+      "prerequisites": [
+        "py.functions"
+      ],
+      "aliases": [
+        "Python modules",
+        "Python import",
+        "mô đun Python"
+      ]
+    },
+    {
+      "id": "py.packages",
+      "domain": "python",
+      "name": "Installing packages",
+      "description": "Install a package and distinguish standard-library and third-party modules.",
+      "prerequisites": [
+        "py.modules",
+        "py.venv"
+      ],
+      "aliases": [
+        "Python packages",
+        "pip install",
+        "cài thư viện"
+      ]
+    },
+    {
+      "id": "py.venv",
+      "domain": "python",
+      "name": "Virtual environments",
+      "description": "Create and activate an isolated Python environment.",
+      "prerequisites": [
+        "py.basic"
+      ],
+      "aliases": [
+        "Python venv",
+        "virtual environment",
+        "môi trường ảo"
+      ]
+    },
+    {
+      "id": "py.debugging",
+      "domain": "python",
+      "name": "Debugging Python",
+      "description": "Read tracebacks and isolate errors using small reproducible examples.",
+      "prerequisites": [
+        "py.functions",
+        "py.exceptions"
+      ],
+      "aliases": [
+        "debug Python",
+        "Python traceback",
+        "sửa lỗi Python"
+      ]
+    },
+    {
+      "id": "py.tests",
+      "domain": "python",
+      "name": "Basic tests",
+      "description": "Write simple assertions and tests for a function.",
+      "prerequisites": [
+        "py.return_values"
+      ],
+      "aliases": [
+        "Python tests",
+        "Python assert",
+        "kiểm thử Python"
+      ]
+    },
+    {
+      "id": "py.iterators",
+      "domain": "python",
+      "name": "Iteration helpers",
+      "description": "Use enumerate and zip when iterating over collections.",
+      "prerequisites": [
+        "py.for_loop",
+        "py.tuples"
+      ],
+      "aliases": [
+        "Python enumerate",
+        "Python zip",
+        "iteration helpers"
+      ]
+    },
+    {
+      "id": "py.sorting",
+      "domain": "python",
+      "name": "Sorting collections",
+      "description": "Sort a collection using sorted and a key function.",
+      "prerequisites": [
+        "py.lists",
+        "py.functions"
+      ],
+      "aliases": [
+        "Python sorted",
+        "Python list sort",
+        "sắp xếp Python"
+      ]
+    },
+    {
+      "id": "py.dates",
+      "domain": "python",
+      "name": "Dates and times",
+      "description": "Parse and format basic date and time values with datetime.",
+      "prerequisites": [
+        "py.modules",
+        "py.strings"
+      ],
+      "aliases": [
+        "Python datetime",
+        "Python dates",
+        "ngày giờ Python"
+      ]
+    },
+    {
+      "id": "ai.llm_foundation",
+      "domain": "ai",
+      "name": "Nền tảng AI và LLM",
+      "description": "Nội dung bài slide \"Nền tảng AI và LLM\" của khóa AICB.",
+      "prerequisites": [],
+      "aliases": [
+        "Nền tảng AI và LLM",
+        "Nền tảng AI và LLM",
+        "LLM",
+        "AI foundation",
+        "token",
+        "context window"
+      ]
+    },
+    {
+      "id": "ai.business_problem",
+      "domain": "ai",
+      "name": "Bài toán kinh doanh cho AI",
+      "description": "Nội dung bài slide \"Xác định bài toán kinh doanh cho AI\" của khóa AICB.",
+      "prerequisites": [
+        "ai.llm_foundation"
+      ],
+      "aliases": [
+        "Bài toán kinh doanh cho AI",
+        "Xác định bài toán kinh doanh cho AI",
+        "bài toán kinh doanh",
+        "use case AI",
+        "mức tự động hóa"
+      ]
+    },
+    {
+      "id": "ai.react_agent",
+      "domain": "ai",
+      "name": "Agent và ReAct",
+      "description": "Nội dung bài slide \"Từ Chatbot đến Agent - ReAct\" của khóa AICB.",
+      "prerequisites": [
+        "ai.llm_foundation"
+      ],
+      "aliases": [
+        "Agent và ReAct",
+        "Từ Chatbot đến Agent - ReAct",
+        "ReAct",
+        "agent",
+        "chatbot",
+        "agentic"
+      ]
+    },
+    {
+      "id": "ai.prompt_tool_calling",
+      "domain": "ai",
+      "name": "Prompt Engineering và Tool Calling",
+      "description": "Nội dung bài slide \"Prompt Engineering và Tool Calling\" của khóa AICB.",
+      "prerequisites": [
+        "ai.llm_foundation"
+      ],
+      "aliases": [
+        "Prompt Engineering và Tool Calling",
+        "Prompt Engineering và Tool Calling",
+        "prompt",
+        "prompt engineering",
+        "tool calling",
+        "function calling"
+      ]
+    },
+    {
+      "id": "ai.harness",
+      "domain": "ai",
+      "name": "Context, Loop và Harness",
+      "description": "Nội dung bài slide \"Context, Loop và Harness Engineering\" của khóa AICB.",
+      "prerequisites": [
+        "ai.prompt_tool_calling"
+      ],
+      "aliases": [
+        "Context, Loop và Harness",
+        "Context, Loop và Harness Engineering",
+        "harness",
+        "context engineering",
+        "agent loop"
+      ]
+    },
+    {
+      "id": "ai.product_thinking",
+      "domain": "ai",
+      "name": "Tư duy sản phẩm AI và PRD",
+      "description": "Nội dung bài slide \"Tư duy sản phẩm AI và yêu cầu (PRD)\" của khóa AICB.",
+      "prerequisites": [
+        "ai.business_problem"
+      ],
+      "aliases": [
+        "Tư duy sản phẩm AI và PRD",
+        "Tư duy sản phẩm AI và yêu cầu (PRD)",
+        "PRD",
+        "product thinking",
+        "yêu cầu sản phẩm"
+      ]
+    },
+    {
+      "id": "ai.product_management",
+      "domain": "ai",
+      "name": "Quản lý sản phẩm và dự án AI",
+      "description": "Nội dung bài slide \"Quản lý sản phẩm và dự án AI\" của khóa AICB.",
+      "prerequisites": [
+        "ai.product_thinking"
+      ],
+      "aliases": [
+        "Quản lý sản phẩm và dự án AI",
+        "Quản lý sản phẩm và dự án AI",
+        "quản lý dự án AI",
+        "product management",
+        "AI PM"
+      ]
+    },
+    {
+      "id": "ai.data_foundations",
+      "domain": "ai",
+      "name": "Embedding, Chunking và Vector Store",
+      "description": "Nội dung bài slide \"Nền tảng dữ liệu - Embedding, Chunking, Vector Store\" của khóa AICB.",
+      "prerequisites": [
+        "ai.llm_foundation"
+      ],
+      "aliases": [
+        "Embedding, Chunking và Vector Store",
+        "Nền tảng dữ liệu - Embedding, Chunking, Vector Store",
+        "embedding",
+        "chunking",
+        "vector store",
+        "vector database"
+      ]
+    },
+    {
+      "id": "ai.rag_pipeline",
+      "domain": "ai",
+      "name": "RAG Pipeline",
+      "description": "Nội dung bài slide \"RAG Pipeline - Truy xuất và sinh câu trả lời\" của khóa AICB.",
+      "prerequisites": [
+        "ai.data_foundations"
+      ],
+      "aliases": [
+        "RAG Pipeline",
+        "RAG Pipeline - Truy xuất và sinh câu trả lời",
+        "RAG",
+        "retrieval",
+        "truy xuất",
+        "retrieval augmented generation"
+      ]
+    },
+    {
+      "id": "ai.multi_agent",
+      "domain": "ai",
+      "name": "Multi-Agent, MCP và LangGraph",
+      "description": "Nội dung bài slide \"Multi-Agent - MCP, A2A và LangGraph\" của khóa AICB.",
+      "prerequisites": [
+        "ai.react_agent"
+      ],
+      "aliases": [
+        "Multi-Agent, MCP và LangGraph",
+        "Multi-Agent - MCP, A2A và LangGraph",
+        "multi-agent",
+        "MCP",
+        "A2A",
+        "LangGraph"
+      ]
+    },
+    {
+      "id": "ai.data_pipeline",
+      "domain": "ai",
+      "name": "Data Pipeline và Observability",
+      "description": "Nội dung bài slide \"Data Pipeline và Data Observability\" của khóa AICB.",
+      "prerequisites": [
+        "ai.data_foundations"
+      ],
+      "aliases": [
+        "Data Pipeline và Observability",
+        "Data Pipeline và Data Observability",
+        "data pipeline",
+        "data observability",
+        "data quality"
+      ]
+    },
+    {
+      "id": "ai.guardrails",
+      "domain": "ai",
+      "name": "Guardrails, HITL và Responsible AI",
+      "description": "Nội dung bài slide \"Guardrails, HITL và Responsible AI\" của khóa AICB.",
+      "prerequisites": [
+        "ai.react_agent"
+      ],
+      "aliases": [
+        "Guardrails, HITL và Responsible AI",
+        "Guardrails, HITL và Responsible AI",
+        "guardrails",
+        "HITL",
+        "human in the loop",
+        "responsible AI"
+      ]
+    },
+    {
+      "id": "ai.deployment",
+      "domain": "ai",
+      "name": "Triển khai Agent lên Cloud",
+      "description": "Nội dung bài slide \"Triển khai Agent lên Cloud\" của khóa AICB.",
+      "prerequisites": [
+        "ai.react_agent"
+      ],
+      "aliases": [
+        "Triển khai Agent lên Cloud",
+        "Triển khai Agent lên Cloud",
+        "deploy",
+        "deployment",
+        "cloud",
+        "production"
+      ]
+    },
+    {
+      "id": "ai.monitoring",
+      "domain": "ai",
+      "name": "Monitoring, Logging và Observability",
+      "description": "Nội dung bài slide \"Monitoring, Logging và Observability\" của khóa AICB.",
+      "prerequisites": [
+        "ai.deployment"
+      ],
+      "aliases": [
+        "Monitoring, Logging và Observability",
+        "Monitoring, Logging và Observability",
+        "monitoring",
+        "logging",
+        "observability",
+        "tracing"
+      ]
+    },
+    {
+      "id": "ai.evaluation",
+      "domain": "ai",
+      "name": "Đánh giá và Benchmark AI",
+      "description": "Nội dung bài slide \"Đánh giá và Benchmark AI\" của khóa AICB.",
+      "prerequisites": [
+        "ai.llm_foundation"
+      ],
+      "aliases": [
+        "Đánh giá và Benchmark AI",
+        "Đánh giá và Benchmark AI",
+        "evaluation",
+        "benchmark",
+        "eval",
+        "LLM as judge"
+      ]
+    }
+  ]
+}

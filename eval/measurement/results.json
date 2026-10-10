@@ -1,0 +1,385 @@
+{
+  "evaluation": "internal measurement regression/evaluation",
+  "authorship": "Synthetic agent-authored regression cases; expected outcomes specified independently of execution. No real learner outcome evidence.",
+  "cases": 20,
+  "passed": 20,
+  "outcomes": [
+    {
+      "id": "both-on-pace",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "both-behind",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 0.4,
+      "pacing_b": 0.4,
+      "pair_score": 0.4,
+      "gap": 0.0,
+      "risk_a": 0.15,
+      "streak": 1
+    },
+    {
+      "id": "a-behind",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 0.2,
+      "pacing_b": 0.8,
+      "pair_score": 0.2,
+      "gap": 0.6000000000000001,
+      "risk_a": 0.2,
+      "streak": 1
+    },
+    {
+      "id": "b-behind",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 0.5,
+      "pair_score": 0.5,
+      "gap": 0.5,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "no-due-a",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 0.5,
+      "pair_score": 0.5,
+      "gap": 0.5,
+      "risk_a": 0.25,
+      "streak": 0
+    },
+    {
+      "id": "future-only",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.4,
+      "streak": 0
+    },
+    {
+      "id": "overdue-incomplete",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 0.0,
+      "pacing_b": 0.0,
+      "pair_score": 0.0,
+      "gap": 0.0,
+      "risk_a": 0.65,
+      "streak": 0
+    },
+    {
+      "id": "duplicate-checkins",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "sparse-checkins",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true,
+        "expected_absent": true
+      },
+      "pacing_a": 0.0,
+      "pacing_b": 0.0,
+      "pair_score": 0.0,
+      "gap": 0.0,
+      "risk_a": 0.5428571428571428,
+      "streak": 0
+    },
+    {
+      "id": "consecutive-days",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.0,
+      "streak": 3
+    },
+    {
+      "id": "same-day-presence",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "cutoff-before",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true,
+        "presence_date": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.03571428571428571,
+      "streak": 1
+    },
+    {
+      "id": "cutoff-exact",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_streak": true,
+        "presence_date": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "high-gap",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_gap_attention": true
+      },
+      "pacing_a": 0.9,
+      "pacing_b": 0.2,
+      "pair_score": 0.2,
+      "gap": 0.7,
+      "risk_a": 0.024999999999999994,
+      "streak": 1
+    },
+    {
+      "id": "low-gap",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_gap_attention": true
+      },
+      "pacing_a": 0.8,
+      "pacing_b": 0.75,
+      "pair_score": 0.75,
+      "gap": 0.050000000000000044,
+      "risk_a": 0.04999999999999999,
+      "streak": 1
+    },
+    {
+      "id": "gap-boundary",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_gap_attention": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 0.7,
+      "pair_score": 0.7,
+      "gap": 0.30000000000000004,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "ahead-uncapped",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true
+      },
+      "pacing_a": 2.0,
+      "pacing_b": 1.5,
+      "pair_score": 1.5,
+      "gap": 0.5,
+      "risk_a": 0.0,
+      "streak": 1
+    },
+    {
+      "id": "risk-two-day-boundary",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_absent": true,
+        "risk_a": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.22142857142857142,
+      "streak": 0
+    },
+    {
+      "id": "risk-one-day-boundary",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "expected_absent": true,
+        "risk_a": true
+      },
+      "pacing_a": 1.0,
+      "pacing_b": 1.0,
+      "pair_score": 1.0,
+      "gap": 0.0,
+      "risk_a": 0.03571428571428571,
+      "streak": 1
+    },
+    {
+      "id": "risk-saturated-all-features",
+      "passed": true,
+      "checks": {
+        "pacing_a": true,
+        "pacing_b": true,
+        "pair_score": true,
+        "gap": true,
+        "invariants": true,
+        "risk_range": true,
+        "risk_a": true
+      },
+      "pacing_a": 0.0,
+      "pacing_b": 0.0,
+      "pair_score": 0.0,
+      "gap": 0.0,
+      "risk_a": 1.0,
+      "streak": 0
+    }
+  ]
+}

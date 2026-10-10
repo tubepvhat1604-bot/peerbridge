@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "description": "Exported from explicitly isolated simulated localhost demo, never production pilot evidence.",
+  "as_of": "2030-01-10T08:00:00+07:00",
+  "interventions": [
+    {
+      "id": "4de6b5a4-aff9-4476-a9d3-14059676ea90",
+      "pair_id": 1,
+      "user_id": 13,
+      "variant": "ai",
+      "action": "replan",
+      "delivery_status": "SIMULATED",
+      "created_at": "2030-01-09T08:00:00+07:00",
+      "attempts": [
+        {
+          "status": "SIMULATED",
+          "created_at": "2030-01-09T08:00:00+07:00"
+        }
+      ]
+    }
+  ],
+  "completions": [
+    {
+      "item_id": "3148d2a7-70c1-462e-b7dd-ac23b723a392",
+      "pair_id": 1,
+      "user_id": 13,
+      "completed_at": "2030-01-09T08:00:00+07:00"
+    }
+  ]
+}

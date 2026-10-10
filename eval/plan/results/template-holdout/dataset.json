@@ -1,0 +1,520 @@
+[
+  {
+    "id": "pair-08",
+    "split": "holdout",
+    "case": "normal",
+    "synthetic": true,
+    "input": {
+      "pair_id": 8,
+      "members": [
+        {
+          "user_id": 115,
+          "goal": "Học truy vấn SQL cơ bản",
+          "deadline": null,
+          "concept_ids": [
+            "sql.join"
+          ],
+          "known_concept_ids": [
+            "python.variables",
+            "python.conditions",
+            "python.loops"
+          ],
+          "can_help_concept_ids": [
+            "python.loops"
+          ],
+          "committed_minutes_per_week": 240,
+          "availability": [
+            {
+              "id": "slot-0",
+              "day_of_week": 0,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-1",
+              "day_of_week": 1,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-2",
+              "day_of_week": 2,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-3",
+              "day_of_week": 3,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-4",
+              "day_of_week": 4,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            }
+          ],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        },
+        {
+          "user_id": 116,
+          "goal": "Học Python cơ bản",
+          "deadline": null,
+          "concept_ids": [
+            "python.loops"
+          ],
+          "known_concept_ids": [
+            "sql.select",
+            "sql.where",
+            "sql.join"
+          ],
+          "can_help_concept_ids": [
+            "sql.join"
+          ],
+          "committed_minutes_per_week": 90,
+          "availability": [
+            {
+              "id": "slot-0",
+              "day_of_week": 0,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-1",
+              "day_of_week": 1,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-2",
+              "day_of_week": 2,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-3",
+              "day_of_week": 3,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-4",
+              "day_of_week": 4,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            }
+          ],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "sql.select",
+          "track": "sql",
+          "prerequisites": [],
+          "action": "Viết 5 câu SELECT trên bảng students",
+          "expected_output": "File chứa 5 câu truy vấn và kết quả",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.where",
+          "track": "sql",
+          "prerequisites": [
+            "sql.select"
+          ],
+          "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+          "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.join",
+          "track": "sql",
+          "prerequisites": [
+            "sql.where"
+          ],
+          "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+          "expected_output": "3 truy vấn JOIN và bảng kết quả",
+          "est_minutes": 60,
+          "resource_ids": []
+        },
+        {
+          "id": "python.variables",
+          "track": "python",
+          "prerequisites": [],
+          "action": "Viết chương trình nhập tên và tính tuổi",
+          "expected_output": "File Python và 3 lần chạy thử",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "python.conditions",
+          "track": "python",
+          "prerequisites": [
+            "python.variables"
+          ],
+          "action": "Viết chương trình phân loại điểm bằng if/else",
+          "expected_output": "File Python với 5 trường hợp kiểm thử",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "python.loops",
+          "track": "python",
+          "prerequisites": [
+            "python.conditions"
+          ],
+          "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+          "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+          "est_minutes": 60,
+          "resource_ids": []
+        }
+      ],
+      "resources": {},
+      "planning_start": "2030-01-07T08:00:00+07:00",
+      "horizon_days": 7,
+      "plan_version": 1,
+      "catalog_source": "synthetic_demo",
+      "busy_intervals": {}
+    }
+  },
+  {
+    "id": "pair-09",
+    "split": "holdout",
+    "case": "little_time",
+    "synthetic": true,
+    "input": {
+      "pair_id": 9,
+      "members": [
+        {
+          "user_id": 117,
+          "goal": "Học truy vấn SQL cơ bản",
+          "deadline": null,
+          "concept_ids": [
+            "sql.join"
+          ],
+          "known_concept_ids": [
+            "python.variables",
+            "python.conditions",
+            "python.loops"
+          ],
+          "can_help_concept_ids": [
+            "python.loops"
+          ],
+          "committed_minutes_per_week": 30,
+          "availability": [],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        },
+        {
+          "user_id": 118,
+          "goal": "Học Python cơ bản",
+          "deadline": null,
+          "concept_ids": [
+            "python.loops"
+          ],
+          "known_concept_ids": [
+            "sql.select",
+            "sql.where",
+            "sql.join"
+          ],
+          "can_help_concept_ids": [
+            "sql.join"
+          ],
+          "committed_minutes_per_week": 180,
+          "availability": [
+            {
+              "id": "slot-0",
+              "day_of_week": 0,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-1",
+              "day_of_week": 1,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-2",
+              "day_of_week": 2,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-3",
+              "day_of_week": 3,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-4",
+              "day_of_week": 4,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            }
+          ],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "sql.select",
+          "track": "sql",
+          "prerequisites": [],
+          "action": "Viết 5 câu SELECT trên bảng students",
+          "expected_output": "File chứa 5 câu truy vấn và kết quả",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.where",
+          "track": "sql",
+          "prerequisites": [
+            "sql.select"
+          ],
+          "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+          "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.join",
+          "track": "sql",
+          "prerequisites": [
+            "sql.where"
+          ],
+          "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+          "expected_output": "3 truy vấn JOIN và bảng kết quả",
+          "est_minutes": 60,
+          "resource_ids": []
+        },
+        {
+          "id": "python.variables",
+          "track": "python",
+          "prerequisites": [],
+          "action": "Viết chương trình nhập tên và tính tuổi",
+          "expected_output": "File Python và 3 lần chạy thử",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "python.conditions",
+          "track": "python",
+          "prerequisites": [
+            "python.variables"
+          ],
+          "action": "Viết chương trình phân loại điểm bằng if/else",
+          "expected_output": "File Python với 5 trường hợp kiểm thử",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "python.loops",
+          "track": "python",
+          "prerequisites": [
+            "python.conditions"
+          ],
+          "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+          "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+          "est_minutes": 60,
+          "resource_ids": []
+        }
+      ],
+      "resources": {},
+      "planning_start": "2030-01-07T08:00:00+07:00",
+      "horizon_days": 7,
+      "plan_version": 1,
+      "catalog_source": "synthetic_demo",
+      "busy_intervals": {}
+    }
+  },
+  {
+    "id": "pair-10",
+    "split": "holdout",
+    "case": "no_shared_time",
+    "synthetic": true,
+    "input": {
+      "pair_id": 10,
+      "members": [
+        {
+          "user_id": 119,
+          "goal": "Học truy vấn SQL cơ bản",
+          "deadline": "2030-01-07T20:00:00+07:00",
+          "concept_ids": [
+            "sql.join"
+          ],
+          "known_concept_ids": [
+            "python.variables",
+            "python.conditions",
+            "python.loops"
+          ],
+          "can_help_concept_ids": [
+            "python.loops"
+          ],
+          "committed_minutes_per_week": 180,
+          "availability": [
+            {
+              "id": "slot-0",
+              "day_of_week": 0,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-1",
+              "day_of_week": 1,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-2",
+              "day_of_week": 2,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-3",
+              "day_of_week": 3,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            },
+            {
+              "id": "slot-4",
+              "day_of_week": 4,
+              "start_time": "19:00:00",
+              "end_time": "20:30:00"
+            }
+          ],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        },
+        {
+          "user_id": 120,
+          "goal": "Học Python cơ bản",
+          "deadline": null,
+          "concept_ids": [
+            "python.loops"
+          ],
+          "known_concept_ids": [
+            "sql.select",
+            "sql.where",
+            "sql.join"
+          ],
+          "can_help_concept_ids": [
+            "sql.join"
+          ],
+          "committed_minutes_per_week": 180,
+          "availability": [
+            {
+              "id": "slot-0",
+              "day_of_week": 0,
+              "start_time": "09:00:00",
+              "end_time": "10:30:00"
+            },
+            {
+              "id": "slot-1",
+              "day_of_week": 1,
+              "start_time": "09:00:00",
+              "end_time": "10:30:00"
+            },
+            {
+              "id": "slot-2",
+              "day_of_week": 2,
+              "start_time": "09:00:00",
+              "end_time": "10:30:00"
+            },
+            {
+              "id": "slot-3",
+              "day_of_week": 3,
+              "start_time": "09:00:00",
+              "end_time": "10:30:00"
+            },
+            {
+              "id": "slot-4",
+              "day_of_week": 4,
+              "start_time": "09:00:00",
+              "end_time": "10:30:00"
+            }
+          ],
+          "timezone": "Asia/Ho_Chi_Minh",
+          "location": "Góc học tập của tôi"
+        }
+      ],
+      "concepts": [
+        {
+          "id": "sql.select",
+          "track": "sql",
+          "prerequisites": [],
+          "action": "Viết 5 câu SELECT trên bảng students",
+          "expected_output": "File chứa 5 câu truy vấn và kết quả",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.where",
+          "track": "sql",
+          "prerequisites": [
+            "sql.select"
+          ],
+          "action": "Viết 5 câu truy vấn lọc bằng WHERE",
+          "expected_output": "5 truy vấn và giải thích điều kiện lọc",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "sql.join",
+          "track": "sql",
+          "prerequisites": [
+            "sql.where"
+          ],
+          "action": "Ghép hai bảng bằng 3 câu INNER JOIN",
+          "expected_output": "3 truy vấn JOIN và bảng kết quả",
+          "est_minutes": 60,
+          "resource_ids": []
+        },
+        {
+          "id": "python.variables",
+          "track": "python",
+          "prerequisites": [],
+          "action": "Viết chương trình nhập tên và tính tuổi",
+          "expected_output": "File Python và 3 lần chạy thử",
+          "est_minutes": 30,
+          "resource_ids": []
+        },
+        {
+          "id": "python.conditions",
+          "track": "python",
+          "prerequisites": [
+            "python.variables"
+          ],
+          "action": "Viết chương trình phân loại điểm bằng if/else",
+          "expected_output": "File Python với 5 trường hợp kiểm thử",
+          "est_minutes": 45,
+          "resource_ids": []
+        },
+        {
+          "id": "python.loops",
+          "track": "python",
+          "prerequisites": [
+            "python.conditions"
+          ],
+          "action": "Dùng vòng lặp tính tổng và lọc số chẵn",
+          "expected_output": "Hai hàm Python và 5 ví dụ chạy",
+          "est_minutes": 60,
+          "resource_ids": []
+        }
+      ],
+      "resources": {},
+      "planning_start": "2030-01-07T08:00:00+07:00",
+      "horizon_days": 7,
+      "plan_version": 1,
+      "catalog_source": "synthetic_demo",
+      "busy_intervals": {}
+    }
+  }
+]

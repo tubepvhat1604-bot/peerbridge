@@ -1,0 +1,5 @@
+file,category,is_study,expected_concepts,note
+real/minh_sql_join_01.jpg,photo_screen,true,sql.join,
+real/lan_pandas_merge_01.jpg,photo_screen,true,py.pandas_basic;py.basic,
+real/vo_thong_ke_01.jpg,notebook,true,stats.descriptive,
+real/an_trua_01.jpg,not_study,false,,

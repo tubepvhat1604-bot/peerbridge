@@ -1,0 +1,20 @@
+.workspace { display: grid; gap: 18px; }
+.workspace > :global(.page-title) { margin-bottom: 0; }
+.grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 18px; align-items: start; }
+.grid h2, .roomHeader h2 { font-size: 20px; margin-bottom: 14px; }
+.form fieldset { display: grid; gap: 16px; min-width: 0; padding: 0; border: 0; margin: 0; }
+.form label { display: grid; gap: 7px; font-size: 13px; font-weight: 700; }
+.form input, .form select { width: 100%; min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 9px; background: #fbfcfa; font-size: 14px; }
+.form :is(input, select, button):focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.dates { display: grid; gap: 14px; }
+.meta { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0 0 10px; overflow-wrap: anywhere; }
+.form .meta { margin: 0; }
+.list { display: grid; gap: 12px; }
+.list h3 { font-size: 16px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.selected { border-color: var(--teal); }
+.room { min-width: 0; display: grid; gap: 16px; padding-top: 8px; }
+.roomHeader { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.roomHeader h2 { margin-bottom: 5px; overflow-wrap: anywhere; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 1000px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .roomHeader { align-items: stretch; flex-direction: column; } .actions button { flex: 1; } }

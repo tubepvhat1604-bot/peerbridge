@@ -1,0 +1,43 @@
+{
+  "provenance": "Agent-authored synthetic regression fixtures; labels fixed before evaluator execution. Not real users or independent product accuracy.",
+  "label_rule": "Within each group, the three opposite-orientation learners are relevant partners: mutual canonical needs/offers, theta >=0.5, two common slots, deadlines within 28 days and hours within 2x. Same-orientation learners are overlap distractors. Other groups fail the two-slot filter.",
+  "groups": {
+    "joins_functions": {"concept_a": "sql.join", "concept_b": "py.functions", "days": [0,1]},
+    "groups_lists": {"concept_a": "sql.group_by", "concept_b": "py.lists", "days": [1,2]},
+    "windows_dicts": {"concept_a": "sql.window_func", "concept_b": "py.dictionaries", "days": [2,3]},
+    "cte_loops": {"concept_a": "sql.cte", "concept_b": "py.for_loop", "days": [3,4]},
+    "subquery_conditions": {"concept_a": "sql.subquery", "concept_b": "py.conditions", "days": [4,5]}
+  },
+  "personas": [
+    {"user_id":1,"group":"joins_functions","orientation":"a","hours":5,"deadline":"2026-11-01","relevant_partner_ids":[4,5,6]},
+    {"user_id":2,"group":"joins_functions","orientation":"a","hours":6,"deadline":null,"relevant_partner_ids":[4,5,6]},
+    {"user_id":3,"group":"joins_functions","orientation":"a","hours":5.5,"deadline":"2026-11-10","relevant_partner_ids":[4,5,6]},
+    {"user_id":4,"group":"joins_functions","orientation":"b","hours":5,"deadline":"2026-11-08","relevant_partner_ids":[1,2,3]},
+    {"user_id":5,"group":"joins_functions","orientation":"b","hours":6,"deadline":"2026-11-15","relevant_partner_ids":[1,2,3]},
+    {"user_id":6,"group":"joins_functions","orientation":"b","hours":5.5,"deadline":null,"relevant_partner_ids":[1,2,3]},
+    {"user_id":7,"group":"groups_lists","orientation":"a","hours":5,"deadline":"2026-11-01","relevant_partner_ids":[10,11,12]},
+    {"user_id":8,"group":"groups_lists","orientation":"a","hours":6,"deadline":null,"relevant_partner_ids":[10,11,12]},
+    {"user_id":9,"group":"groups_lists","orientation":"a","hours":5.5,"deadline":"2026-11-10","relevant_partner_ids":[10,11,12]},
+    {"user_id":10,"group":"groups_lists","orientation":"b","hours":5,"deadline":"2026-11-08","relevant_partner_ids":[7,8,9]},
+    {"user_id":11,"group":"groups_lists","orientation":"b","hours":6,"deadline":"2026-11-15","relevant_partner_ids":[7,8,9]},
+    {"user_id":12,"group":"groups_lists","orientation":"b","hours":5.5,"deadline":null,"relevant_partner_ids":[7,8,9]},
+    {"user_id":13,"group":"windows_dicts","orientation":"a","hours":5,"deadline":"2026-11-01","relevant_partner_ids":[16,17,18]},
+    {"user_id":14,"group":"windows_dicts","orientation":"a","hours":6,"deadline":null,"relevant_partner_ids":[16,17,18]},
+    {"user_id":15,"group":"windows_dicts","orientation":"a","hours":5.5,"deadline":"2026-11-10","relevant_partner_ids":[16,17,18]},
+    {"user_id":16,"group":"windows_dicts","orientation":"b","hours":5,"deadline":"2026-11-08","relevant_partner_ids":[13,14,15]},
+    {"user_id":17,"group":"windows_dicts","orientation":"b","hours":6,"deadline":"2026-11-15","relevant_partner_ids":[13,14,15]},
+    {"user_id":18,"group":"windows_dicts","orientation":"b","hours":5.5,"deadline":null,"relevant_partner_ids":[13,14,15]},
+    {"user_id":19,"group":"cte_loops","orientation":"a","hours":5,"deadline":"2026-11-01","relevant_partner_ids":[22,23,24]},
+    {"user_id":20,"group":"cte_loops","orientation":"a","hours":6,"deadline":null,"relevant_partner_ids":[22,23,24]},
+    {"user_id":21,"group":"cte_loops","orientation":"a","hours":5.5,"deadline":"2026-11-10","relevant_partner_ids":[22,23,24]},
+    {"user_id":22,"group":"cte_loops","orientation":"b","hours":5,"deadline":"2026-11-08","relevant_partner_ids":[19,20,21]},
+    {"user_id":23,"group":"cte_loops","orientation":"b","hours":6,"deadline":"2026-11-15","relevant_partner_ids":[19,20,21]},
+    {"user_id":24,"group":"cte_loops","orientation":"b","hours":5.5,"deadline":null,"relevant_partner_ids":[19,20,21]},
+    {"user_id":25,"group":"subquery_conditions","orientation":"a","hours":5,"deadline":"2026-11-01","relevant_partner_ids":[28,29,30]},
+    {"user_id":26,"group":"subquery_conditions","orientation":"a","hours":6,"deadline":null,"relevant_partner_ids":[28,29,30]},
+    {"user_id":27,"group":"subquery_conditions","orientation":"a","hours":5.5,"deadline":"2026-11-10","relevant_partner_ids":[28,29,30]},
+    {"user_id":28,"group":"subquery_conditions","orientation":"b","hours":5,"deadline":"2026-11-08","relevant_partner_ids":[25,26,27]},
+    {"user_id":29,"group":"subquery_conditions","orientation":"b","hours":6,"deadline":"2026-11-15","relevant_partner_ids":[25,26,27]},
+    {"user_id":30,"group":"subquery_conditions","orientation":"b","hours":5.5,"deadline":null,"relevant_partner_ids":[25,26,27]}
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "as_of": "2030-01-10T12:00:00+00:00",
+  "sent_count": 4,
+  "matured_count": 3,
+  "pending_count": 1,
+  "checkin_24h_count": 1,
+  "by_variant": {
+    "ai": {
+      "sent_count": 3,
+      "matured_count": 2,
+      "pending_count": 1,
+      "checkin_24h_count": 1,
+      "checkin_24h_rate": 0.5
+    },
+    "template": {
+      "sent_count": 1,
+      "matured_count": 1,
+      "pending_count": 0,
+      "checkin_24h_count": 0,
+      "checkin_24h_rate": 0.0
+    }
+  },
+  "attribution": "First confirmed completion for the same user and pair; descriptive association only.",
+  "observations": [
+    {
+      "intervention_id": "fixture-ai-replay",
+      "variant": "ai",
+      "action": "reminder",
+      "sent_at": "2030-01-09T09:00:00+00:00",
+      "observed_checkin": false,
+      "status": "no_checkin_24h"
+    },
+    {
+      "intervention_id": "fixture-ai-response",
+      "variant": "ai",
+      "action": "reminder",
+      "sent_at": "2030-01-09T10:00:00+00:00",
+      "observed_checkin": true,
+      "status": "responded"
+    },
+    {
+      "intervention_id": "fixture-template-late",
+      "variant": "template",
+      "action": "reminder",
+      "sent_at": "2030-01-09T11:00:00+00:00",
+      "observed_checkin": false,
+      "status": "no_checkin_24h"
+    },
+    {
+      "intervention_id": "fixture-ai-immature",
+      "variant": "ai",
+      "action": "reminder",
+      "sent_at": "2030-01-10T10:00:00+00:00",
+      "observed_checkin": true,
+      "status": "pending"
+    }
+  ],
+  "interpretation": "Quan sát mô tả, không kết luận nhân quả; chỉ SENT được tính đã gửi. PENDING/RESERVED/SIMULATED/FAILED/NOT_CONFIGURED bị loại.",
+  "ran_at": "2026-10-06T08:15:38.887710+00:00",
+  "source_kind": "synthetic_boundary_fixture",
+  "simulation": true,
+  "production_origin_verified": false,
+  "current_delivery_status_counts": {
+    "SENT": 4,
+    "SIMULATED": 1,
+    "PENDING": 1,
+    "NOT_CONFIGURED": 1,
+    "FAILED": 1,
+    "RESERVED": 1,
+    "SUPPRESSED_QUIET_HOURS": 1
+  },
+  "status_count_scope": "Current stored status of interventions created by as_of; not historical state reconstruction.",
+  "future_interventions_excluded": 1,
+  "observation_status": "PARTIALLY_MATURED",
+  "overall_checkin_24h_rate": 0.3333333333333333,
+  "causal_effect_estimated": false
+}

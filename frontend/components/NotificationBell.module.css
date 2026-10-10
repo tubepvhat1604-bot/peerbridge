@@ -1,0 +1,22 @@
+.wrap { position: relative; }
+.bell { position: relative; width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: #fff; display: grid; place-items: center; color: var(--ink); cursor: pointer; transition: background-color .2s ease; }
+.bell:hover { background: #f3f5f3; }
+.bell svg { width: 19px; height: 19px; }
+.bell em { position: absolute; top: -5px; right: -5px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 99px; background: #d4553f; color: #fff; font-style: normal; font-size: 11px; font-weight: 700; display: grid; place-items: center; border: 2px solid #fff; }
+.panel { position: absolute; right: 0; top: calc(100% + 8px); width: min(380px, calc(100vw - 24px)); max-height: min(520px, 70vh); overflow: auto; background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 12px 40px rgba(24, 46, 38, .14); z-index: 40; }
+.head { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: #fff; border-bottom: 1px solid var(--line); }
+.head b { font-size: 15px; }
+.head button { border: 0; background: none; color: var(--accent); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.enable { display: flex; gap: 10px; align-items: center; width: calc(100% - 24px); margin: 12px; padding: 10px 12px; border: 1px dashed var(--mint-2); border-radius: 12px; background: var(--accent-soft); color: var(--accent); font: inherit; font-size: 13px; font-weight: 600; text-align: left; cursor: pointer; }
+.enable svg { width: 16px; height: 16px; flex: none; }
+.empty { padding: 24px 16px; margin: 0; color: var(--muted); font-size: 14px; text-align: center; }
+.panel ul { list-style: none; margin: 0; padding: 4px 0; }
+.panel li button { width: 100%; display: grid; gap: 2px; text-align: left; padding: 11px 16px; border: 0; background: none; font: inherit; color: inherit; cursor: pointer; }
+.panel li button:hover { background: #f5f7f5; }
+.panel li b { font-size: 14px; font-weight: 500; }
+.panel li small { font-size: 13px; color: var(--muted); }
+.panel li em { font-style: normal; font-size: 12px; color: var(--muted); }
+.unread { background: #f3f9f6 !important; }
+.unread b { font-weight: 700 !important; }
+.unread b::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 7px; vertical-align: middle; }
+@media (max-width: 560px) { .panel { position: fixed; left: 12px; right: 12px; top: 64px; width: auto; } }

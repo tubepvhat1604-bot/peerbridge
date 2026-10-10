@@ -1,0 +1,61 @@
+# Render Blueprint: backend FastAPI (backend/app), gói Free.
+# Gói Free không có ổ đĩa bền: database (gồm cả ảnh check-in) được Litestream sao lưu liên tục lên Supabase Storage
+# và tự khôi phục khi server khởi động lại. Điền 5 biến LITESTREAM_* (sync: false) trên Render để bật.
+# Tạo trên Render: New > Blueprint > chọn repo này. Biến có "sync: false" sẽ được hỏi khi tạo.
+services:
+  - type: web
+    name: peerbridge-api
+    runtime: python
+    plan: free
+    region: singapore
+    branch: main
+    rootDir: backend
+    buildCommand: pip install -r requirements-deploy.txt && bash install_litestream.sh
+    startCommand: bash start.sh
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: APP_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: VISION_LLM_PROVIDER
+        value: openai
+      - key: LLM_PROVIDER
+        value: openai
+      # RAG: BM25 trên backend/data/courses/<course_id>/*.md, không cần Qdrant. Bản chạy thật dùng slide khóa AICB
+      # (không kèm repo, xem backend/data/courses/README.md); repo công khai mặc định dùng demo-course.
+      - key: RETRIEVER_PROVIDER
+        value: local
+      - key: RAG_DEFAULT_COURSE_ID
+        value: demo-course
+      # Vòng AI: Plan dùng danh mục chuẩn Data 1, AI chia việc + AI viết lời nhắc coach, AI xếp hạng ghép cặp.
+      - key: PLAN_LLM_PROVIDER
+        value: openai_compatible
+      - key: PLAN_CATALOG_PATH
+        value: data/concepts/plan_catalog.json
+      - key: PLAN_COACH_V2_ENABLED
+        value: "true"
+      - key: MATCH_RERANK_ENABLED
+        value: "true"
+      - key: LOOP_INTERVAL_MINUTES
+        value: "60"
+      - key: VISION_DAILY_BUDGET_USD
+        value: "2"
+      - key: DATABASE_PATH
+        value: ./data/peerbridge.db
+      - key: LITESTREAM_BUCKET
+        sync: false
+      - key: LITESTREAM_ENDPOINT
+        sync: false
+      - key: LITESTREAM_REGION
+        sync: false
+      - key: LITESTREAM_ACCESS_KEY_ID
+        sync: false
+      - key: LITESTREAM_SECRET_ACCESS_KEY
+        sync: false

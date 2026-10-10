@@ -1,0 +1,20 @@
+{"id": "r01", "query": "Hàm đệ quy cần những phần nào để không bị lặp vô hạn?", "course_id": "demo-course", "expected_source": "de-quy.md"}
+{"id": "r02", "query": "Tràn ngăn xếp stack overflow xảy ra khi nào?", "course_id": "demo-course", "expected_source": "de-quy.md"}
+{"id": "r03", "query": "Ví dụ tính giai thừa bằng đệ quy", "course_id": "demo-course", "expected_source": "de-quy.md"}
+{"id": "r04", "query": "Làm sao tìm lỗi đệ quy bằng cách vẽ cây gọi hàm?", "course_id": "demo-course", "expected_source": "de-quy.md"}
+{"id": "r05", "query": "Đệ quy tốn bộ nhớ ngăn xếp theo độ sâu gọi như thế nào?", "course_id": "demo-course", "expected_source": "de-quy.md"}
+{"id": "r06", "query": "Khi nào dùng for và khi nào dùng while?", "course_id": "demo-course", "expected_source": "vong-lap.md"}
+{"id": "r07", "query": "Vòng lặp vô hạn thường do đâu?", "course_id": "demo-course", "expected_source": "vong-lap.md"}
+{"id": "r08", "query": "Lỗi lệch một đơn vị off-by-one khi chọn cận của range là gì?", "course_id": "demo-course", "expected_source": "vong-lap.md"}
+{"id": "r09", "query": "break và continue khác nhau thế nào?", "course_id": "demo-course", "expected_source": "vong-lap.md"}
+{"id": "r10", "query": "Vòng lặp while dùng khi số lần lặp chưa biết trước", "course_id": "demo-course", "expected_source": "vong-lap.md"}
+{"id": "r11", "query": "Big-O là gì?", "course_id": "demo-course", "expected_source": "do-phuc-tap-thuat-toan.md"}
+{"id": "r12", "query": "O(n log n) và O(n^2) khác nhau thế nào?", "course_id": "demo-course", "expected_source": "do-phuc-tap-thuat-toan.md"}
+{"id": "r13", "query": "Cách ước lượng độ phức tạp của hai vòng lặp lồng nhau", "course_id": "demo-course", "expected_source": "do-phuc-tap-thuat-toan.md"}
+{"id": "r14", "query": "Tìm kiếm nhị phân có độ phức tạp bao nhiêu?", "course_id": "demo-course", "expected_source": "do-phuc-tap-thuat-toan.md"}
+{"id": "r15", "query": "Dữ liệu rất lớn thì nên chọn thuật toán độ phức tạp nào?", "course_id": "demo-course", "expected_source": "do-phuc-tap-thuat-toan.md"}
+{"id": "x01", "query": "Công thức nấu phở bò ngon", "course_id": "demo-course", "expected_source": null}
+{"id": "x02", "query": "Giá vàng hôm nay là bao nhiêu", "course_id": "demo-course", "expected_source": null}
+{"id": "x03", "query": "Lịch thi đấu bóng đá World Cup", "course_id": "demo-course", "expected_source": null}
+{"id": "x04", "query": "Cách trồng cây cà chua ở ban công", "course_id": "demo-course", "expected_source": null}
+{"id": "x05", "query": "Review điện thoại mới nhất đáng mua", "course_id": "demo-course", "expected_source": null}

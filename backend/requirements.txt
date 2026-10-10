@@ -1,0 +1,16 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+pydantic>=2.10,<3
+pydantic-settings>=2.7,<3
+SQLAlchemy>=2.0,<3
+alembic>=1.13,<2
+httpx>=0.28,<1
+langgraph>=0.2,<2
+pytest>=8,<9
+python-multipart>=0.0.20,<1
+qdrant-client>=1.12,<2
+sentence-transformers>=3,<6
+pypdf>=5,<7
+tzdata>=2024.1
+pillow>=10.2
+openai>=1.50

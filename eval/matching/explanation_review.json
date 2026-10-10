@@ -1,0 +1,2485 @@
+{
+  "human_review_status": "PENDING",
+  "samples": [
+    {
+      "review_id": 1,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 1,
+        "user_concepts": [
+          {
+            "concept_id": "sql.join",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 1,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.functions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 1,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "source_b": {
+        "user_id": 4,
+        "user_concepts": [
+          {
+            "concept_id": "py.functions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 4,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.join",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 4,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 4,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 1,
+          "candidate_user_id": 4,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.join"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.functions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-05T19:00:00+07:00",
+              "ends_at": "2026-10-05T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Inner joins that you need, and you offer Defining functions that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 2,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 2,
+        "user_concepts": [
+          {
+            "concept_id": "sql.join",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 2,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.functions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 2,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": null
+      },
+      "source_b": {
+        "user_id": 5,
+        "user_concepts": [
+          {
+            "concept_id": "py.functions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 5,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.join",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 5,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": "2026-11-15"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 5,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 2,
+          "candidate_user_id": 5,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.join"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.functions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-05T19:00:00+07:00",
+              "ends_at": "2026-10-05T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 6.0,
+          "weekly_hours_b": 6.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Inner joins that you need, and you offer Defining functions that they need. You share 2 weekly study slots in the reference week and committed 6 and 6 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 3,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 3,
+        "user_concepts": [
+          {
+            "concept_id": "sql.join",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 3,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.functions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 3,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": "2026-11-10"
+      },
+      "source_b": {
+        "user_id": 6,
+        "user_concepts": [
+          {
+            "concept_id": "py.functions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 6,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.join",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 6,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": null
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 6,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 3,
+          "candidate_user_id": 6,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.join"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.functions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-05T19:00:00+07:00",
+              "ends_at": "2026-10-05T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.5,
+          "weekly_hours_b": 5.5,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Inner joins that you need, and you offer Defining functions that they need. You share 2 weekly study slots in the reference week and committed 5.5 and 5.5 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 4,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 4,
+        "user_concepts": [
+          {
+            "concept_id": "py.functions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 4,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.join",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 4,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "source_b": {
+        "user_id": 1,
+        "user_concepts": [
+          {
+            "concept_id": "sql.join",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 1,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.functions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 1,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 0,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 1,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 4,
+          "candidate_user_id": 1,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "py.functions"
+          ],
+          "concepts_b_receives_from_a": [
+            "sql.join"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-05T19:00:00+07:00",
+              "ends_at": "2026-10-05T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Defining functions that you need, and you offer Inner joins that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 5,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 7,
+        "user_concepts": [
+          {
+            "concept_id": "sql.group_by",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 7,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.lists",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 7,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "source_b": {
+        "user_id": 10,
+        "user_concepts": [
+          {
+            "concept_id": "py.lists",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 10,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.group_by",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 10,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 10,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 7,
+          "candidate_user_id": 10,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.group_by"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.lists"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Grouping rows that you need, and you offer Lists that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 6,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 8,
+        "user_concepts": [
+          {
+            "concept_id": "sql.group_by",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 8,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.lists",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 8,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": null
+      },
+      "source_b": {
+        "user_id": 11,
+        "user_concepts": [
+          {
+            "concept_id": "py.lists",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 11,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.group_by",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 11,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": "2026-11-15"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 11,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 8,
+          "candidate_user_id": 11,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.group_by"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.lists"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 6.0,
+          "weekly_hours_b": 6.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Grouping rows that you need, and you offer Lists that they need. You share 2 weekly study slots in the reference week and committed 6 and 6 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 7,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 9,
+        "user_concepts": [
+          {
+            "concept_id": "sql.group_by",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 9,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.lists",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 9,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": "2026-11-10"
+      },
+      "source_b": {
+        "user_id": 12,
+        "user_concepts": [
+          {
+            "concept_id": "py.lists",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 12,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.group_by",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 12,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": null
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 12,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 9,
+          "candidate_user_id": 12,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.group_by"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.lists"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.5,
+          "weekly_hours_b": 5.5,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Grouping rows that you need, and you offer Lists that they need. You share 2 weekly study slots in the reference week and committed 5.5 and 5.5 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 8,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 10,
+        "user_concepts": [
+          {
+            "concept_id": "py.lists",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 10,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.group_by",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 10,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "source_b": {
+        "user_id": 7,
+        "user_concepts": [
+          {
+            "concept_id": "sql.group_by",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 7,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.lists",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 7,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 1,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 7,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 10,
+          "candidate_user_id": 7,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "py.lists"
+          ],
+          "concepts_b_receives_from_a": [
+            "sql.group_by"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-06T19:00:00+07:00",
+              "ends_at": "2026-10-06T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Lists that you need, and you offer Grouping rows that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 9,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 13,
+        "user_concepts": [
+          {
+            "concept_id": "sql.window_func",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 13,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.dictionaries",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 13,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "source_b": {
+        "user_id": 16,
+        "user_concepts": [
+          {
+            "concept_id": "py.dictionaries",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 16,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.window_func",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 16,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 16,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 13,
+          "candidate_user_id": 16,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.window_func"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.dictionaries"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Window functions that you need, and you offer Dictionaries that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 10,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 14,
+        "user_concepts": [
+          {
+            "concept_id": "sql.window_func",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 14,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.dictionaries",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 14,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": null
+      },
+      "source_b": {
+        "user_id": 17,
+        "user_concepts": [
+          {
+            "concept_id": "py.dictionaries",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 17,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.window_func",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 17,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": "2026-11-15"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 17,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 14,
+          "candidate_user_id": 17,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.window_func"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.dictionaries"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 6.0,
+          "weekly_hours_b": 6.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Window functions that you need, and you offer Dictionaries that they need. You share 2 weekly study slots in the reference week and committed 6 and 6 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 11,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 15,
+        "user_concepts": [
+          {
+            "concept_id": "sql.window_func",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 15,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.dictionaries",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 15,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": "2026-11-10"
+      },
+      "source_b": {
+        "user_id": 18,
+        "user_concepts": [
+          {
+            "concept_id": "py.dictionaries",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 18,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.window_func",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 18,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": null
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 18,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 15,
+          "candidate_user_id": 18,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.window_func"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.dictionaries"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.5,
+          "weekly_hours_b": 5.5,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Window functions that you need, and you offer Dictionaries that they need. You share 2 weekly study slots in the reference week and committed 5.5 and 5.5 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 12,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 16,
+        "user_concepts": [
+          {
+            "concept_id": "py.dictionaries",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 16,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.window_func",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 16,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "source_b": {
+        "user_id": 13,
+        "user_concepts": [
+          {
+            "concept_id": "sql.window_func",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 13,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.dictionaries",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 13,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 2,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 13,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 16,
+          "candidate_user_id": 13,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "py.dictionaries"
+          ],
+          "concepts_b_receives_from_a": [
+            "sql.window_func"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-07T19:00:00+07:00",
+              "ends_at": "2026-10-07T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Dictionaries that you need, and you offer Window functions that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 13,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 19,
+        "user_concepts": [
+          {
+            "concept_id": "sql.cte",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 19,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.for_loop",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 19,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "source_b": {
+        "user_id": 22,
+        "user_concepts": [
+          {
+            "concept_id": "py.for_loop",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 22,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.cte",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 22,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 22,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 19,
+          "candidate_user_id": 22,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.cte"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.for_loop"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Common table expressions that you need, and you offer For loops that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 14,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 20,
+        "user_concepts": [
+          {
+            "concept_id": "sql.cte",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 20,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.for_loop",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 20,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": null
+      },
+      "source_b": {
+        "user_id": 23,
+        "user_concepts": [
+          {
+            "concept_id": "py.for_loop",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 23,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.cte",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 23,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": "2026-11-15"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 23,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 20,
+          "candidate_user_id": 23,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.cte"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.for_loop"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 6.0,
+          "weekly_hours_b": 6.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Common table expressions that you need, and you offer For loops that they need. You share 2 weekly study slots in the reference week and committed 6 and 6 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 15,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 21,
+        "user_concepts": [
+          {
+            "concept_id": "sql.cte",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 21,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.for_loop",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 21,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": "2026-11-10"
+      },
+      "source_b": {
+        "user_id": 24,
+        "user_concepts": [
+          {
+            "concept_id": "py.for_loop",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 24,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.cte",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 24,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": null
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 24,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 21,
+          "candidate_user_id": 24,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.cte"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.for_loop"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.5,
+          "weekly_hours_b": 5.5,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Common table expressions that you need, and you offer For loops that they need. You share 2 weekly study slots in the reference week and committed 5.5 and 5.5 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 16,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 22,
+        "user_concepts": [
+          {
+            "concept_id": "py.for_loop",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 22,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.cte",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 22,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "source_b": {
+        "user_id": 19,
+        "user_concepts": [
+          {
+            "concept_id": "sql.cte",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 19,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.for_loop",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 19,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 3,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 19,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 22,
+          "candidate_user_id": 19,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "py.for_loop"
+          ],
+          "concepts_b_receives_from_a": [
+            "sql.cte"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-08T19:00:00+07:00",
+              "ends_at": "2026-10-08T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers For loops that you need, and you offer Common table expressions that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 17,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 25,
+        "user_concepts": [
+          {
+            "concept_id": "sql.subquery",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 25,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.conditions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 25,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "source_b": {
+        "user_id": 28,
+        "user_concepts": [
+          {
+            "concept_id": "py.conditions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 28,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.subquery",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 28,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 28,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 25,
+          "candidate_user_id": 28,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.subquery"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.conditions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-10T19:00:00+07:00",
+              "ends_at": "2026-10-10T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Subqueries that you need, and you offer Conditional execution that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 18,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 26,
+        "user_concepts": [
+          {
+            "concept_id": "sql.subquery",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 26,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.conditions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 26,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": null
+      },
+      "source_b": {
+        "user_id": 29,
+        "user_concepts": [
+          {
+            "concept_id": "py.conditions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 29,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.subquery",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 29,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 6.0,
+        "deadline": "2026-11-15"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 29,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 26,
+          "candidate_user_id": 29,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.subquery"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.conditions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-10T19:00:00+07:00",
+              "ends_at": "2026-10-10T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 6.0,
+          "weekly_hours_b": 6.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Subqueries that you need, and you offer Conditional execution that they need. You share 2 weekly study slots in the reference week and committed 6 and 6 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 19,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 27,
+        "user_concepts": [
+          {
+            "concept_id": "sql.subquery",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 27,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.conditions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 27,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": "2026-11-10"
+      },
+      "source_b": {
+        "user_id": 30,
+        "user_concepts": [
+          {
+            "concept_id": "py.conditions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 30,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.subquery",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 30,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.5,
+        "deadline": null
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 30,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 27,
+          "candidate_user_id": 30,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "sql.subquery"
+          ],
+          "concepts_b_receives_from_a": [
+            "py.conditions"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-10T19:00:00+07:00",
+              "ends_at": "2026-10-10T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.5,
+          "weekly_hours_b": 5.5,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": null,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Subqueries that you need, and you offer Conditional execution that they need. You share 2 weekly study slots in the reference week and committed 5.5 and 5.5 hours per week.",
+        "rerank_rating": null
+      }
+    },
+    {
+      "review_id": 20,
+      "human_review": "PENDING",
+      "source_a": {
+        "user_id": 28,
+        "user_concepts": [
+          {
+            "concept_id": "py.conditions",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 28,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "sql.subquery",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 28,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-08"
+      },
+      "source_b": {
+        "user_id": 25,
+        "user_concepts": [
+          {
+            "concept_id": "sql.subquery",
+            "role": "need",
+            "self_level": "learning",
+            "user_id": 25,
+            "theta": 0.0,
+            "n_attempts": 0
+          },
+          {
+            "concept_id": "py.conditions",
+            "role": "offer",
+            "self_level": "strong",
+            "user_id": 25,
+            "theta": 1.0,
+            "n_attempts": 0
+          }
+        ],
+        "availability": [
+          {
+            "day_of_week": 4,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          },
+          {
+            "day_of_week": 5,
+            "start_time": "19:00:00",
+            "end_time": "20:00:00",
+            "timezone": "Asia/Ho_Chi_Minh"
+          }
+        ],
+        "weekly_hours": 5.0,
+        "deadline": "2026-11-01"
+      },
+      "result": {
+        "contract_version": "data1.match.v1",
+        "candidate_user_id": 25,
+        "total_score": 0.75,
+        "reciprocal_score": 1.0,
+        "component_scores": {
+          "coverage_a_by_b": 1.0,
+          "coverage_b_by_a": 1.0,
+          "reciprocal_complementarity": 1.0,
+          "concept_overlap": 0.0,
+          "availability_overlap": 1.0,
+          "commitment_similarity": 1.0
+        },
+        "match_level": "complementary",
+        "facts": {
+          "requester_user_id": 28,
+          "candidate_user_id": 25,
+          "requester_revision": 1,
+          "candidate_revision": 1,
+          "concepts_a_receives_from_b": [
+            "py.conditions"
+          ],
+          "concepts_b_receives_from_a": [
+            "sql.subquery"
+          ],
+          "shared_learning_concepts": [],
+          "common_slots": [
+            {
+              "starts_at": "2026-10-09T19:00:00+07:00",
+              "ends_at": "2026-10-09T20:00:00+07:00"
+            },
+            {
+              "starts_at": "2026-10-10T19:00:00+07:00",
+              "ends_at": "2026-10-10T20:00:00+07:00"
+            }
+          ],
+          "reference_week": "2026-10-05",
+          "weekly_hours_a": 5.0,
+          "weekly_hours_b": 5.0,
+          "weekly_hours_ratio": 1.0,
+          "deadline_difference_days": 7,
+          "same_stated_goal": false
+        },
+        "explanation": "Complementary: your partner offers Conditional execution that you need, and you offer Subqueries that they need. You share 2 weekly study slots in the reference week and committed 5 and 5 hours per week, with deadlines 7 days apart.",
+        "rerank_rating": null
+      }
+    }
+  ]
+}

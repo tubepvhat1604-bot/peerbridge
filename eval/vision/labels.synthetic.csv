@@ -1,0 +1,13 @@
+file,category,is_study,expected_concepts,note
+synthetic/sql_join_dark.png,photo_screen,true,sql.join,
+synthetic/sql_groupby_light.png,photo_screen,true,sql.group_by,
+synthetic/sql_select.png,photo_screen,true,sql.select_basic,
+synthetic/sql_window.png,photo_screen,true,sql.window_func,
+synthetic/py_pandas.png,photo_screen,true,py.pandas_basic,
+synthetic/py_basic.png,photo_screen,true,py.basic,
+synthetic/note_stats_desc.jpg,notebook,true,stats.descriptive,
+synthetic/note_ttest.jpg,notebook,true,stats.hypothesis_test,
+synthetic/blurry_join.jpg,hard,true,sql.join,
+synthetic/blank_page.jpg,not_study,false,,
+synthetic/lunch.jpg,not_study,false,,
+synthetic/sky.jpg,not_study,false,,

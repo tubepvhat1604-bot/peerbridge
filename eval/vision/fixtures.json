@@ -1,0 +1,14 @@
+{
+  "learner_name": "Minh",
+  "concepts": [
+    {"id": "sql.select_basic", "name": "SELECT cơ bản", "description": "Lấy cột, lọc dòng bằng WHERE, sắp xếp ORDER BY"},
+    {"id": "sql.join", "name": "JOIN", "description": "Nối hai bảng theo khóa chung: INNER JOIN, LEFT JOIN"},
+    {"id": "sql.group_by", "name": "GROUP BY", "description": "Gom nhóm và tính tổng, đếm, trung bình; lọc nhóm bằng HAVING"},
+    {"id": "sql.window_func", "name": "Window function", "description": "ROW_NUMBER, RANK, SUM OVER (PARTITION BY ...)"},
+    {"id": "py.basic", "name": "Python cơ bản", "description": "Biến, list, dict, vòng lặp, hàm"},
+    {"id": "py.pandas_basic", "name": "pandas cơ bản", "description": "DataFrame, đọc CSV, lọc, groupby, merge"},
+    {"id": "stats.descriptive", "name": "Thống kê mô tả", "description": "Trung bình, trung vị, độ lệch chuẩn, phân phối"},
+    {"id": "stats.hypothesis_test", "name": "Kiểm định giả thuyết", "description": "Giả thuyết H0/H1, p-value, t-test"},
+    {"id": "excel.pivot", "name": "Pivot table", "description": "Tổng hợp dữ liệu bằng PivotTable trong Excel"}
+  ]
+}

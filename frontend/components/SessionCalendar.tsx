@@ -1,0 +1,23 @@
+"use client";
+import {formatDate} from "@/lib/time";
+import { useEffect, useState } from "react";
+import { api } from "@/lib/api";
+import type { PlanSetup } from "@/lib/plan-types";
+import type { StudySession } from "@/lib/types";
+import Avatar from "./Avatar";
+
+export default function SessionCalendar({ token, pairId, userId, duration, sessions, onPick }: { token: string; pairId: number; userId: number; duration: number; sessions: StudySession[]; onPick: (start: string, end: string) => void }) {
+  const [setup, setSetup] = useState<PlanSetup | null>(null);
+  const [offset, setOffset] = useState(0);
+  const [chosen, setChosen] = useState("");
+  const [error, setError] = useState("");
+  useEffect(() => { let active = true; setSetup(null); setError(""); if (pairId) void api.planSetup(token, pairId).then(s => { if (active) setSetup(s); }).catch(e => { if (active) setError(e.message); }); return () => { active = false; }; }, [token, pairId]);
+  const days = Array.from({length: 3}, (_, i) => { const d = new Date(); d.setHours(0,0,0,0); d.setDate(d.getDate() + offset + i); return d; });
+  const me = setup?.members.find(m => m.user_id === userId), partner = setup?.members.find(m => m.user_id !== userId);
+  function free(member: PlanSetup["members"][number] | undefined, d: Date, hour: number) {
+    const weekday = (d.getDay() + 6) % 7;
+    return !!member?.availability.some(w => w.day_of_week === weekday && Number(w.start_time.slice(0,2)) * 60 + Number(w.start_time.slice(3,5)) <= hour * 60 && Number(w.end_time.slice(0,2)) * 60 + Number(w.end_time.slice(3,5)) >= hour * 60 + duration);
+  }
+  function pick(day: Date, hour: number) { const start = new Date(day); start.setHours(hour,0,0,0); const end = new Date(start.getTime() + duration * 60000); const local = (d: Date) => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}T${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; setChosen(start.toISOString()); onPick(local(start), local(end)); }
+  return <section className="panel session-calendar"><header><div><span className="soft-label">🗓️ LỊCH CỦA HAI BẠN</span><h2>Chọn một giờ cùng rảnh</h2></div><div className="product-actions"><button className="outline" aria-label="Ba ngày trước" onClick={() => setOffset(o => o-3)}>←</button><button className="outline" onClick={() => setOffset(0)}>Hôm nay</button><button className="outline" aria-label="Ba ngày sau" onClick={() => setOffset(o => o+3)}>→</button></div></header><div className="calendar-legend"><span><i className="legend-me"/>Bạn rảnh</span><span><i className="legend-partner"/>{partner?.display_name || "Bạn đồng hành"} rảnh</span><span><i className="legend-both"/>Cả hai cùng rảnh</span></div>{error && <p className="form-error">{error}</p>}{!pairId ? <p>Chọn một bạn đã kết nối để xem giờ rảnh của hai người.</p> : setup && !partner?.availability.length ? <p className="provider-note">Bạn đồng hành chưa lưu giờ rảnh. Bạn vẫn có thể chọn giờ và trao đổi trong phòng học.</p> : null}<div className="calendar-scroll"><div className="calendar-table"><div className="calendar-corner">Giờ VN</div>{days.map(d => <div className="calendar-date" key={d.toISOString()}>{d.toLocaleDateString("vi-VN", {weekday:"short", day:"2-digit",month:"2-digit"})}</div>)}{Array.from({length:15},(_, i) => i+8).map(hour => <div className="calendar-row" key={hour}><div className="calendar-hour">{String(hour).padStart(2,"0")}:00</div>{days.map(d => { const mine = free(me,d,hour), theirs = free(partner,d,hour); const date = new Date(d); date.setHours(hour); const booked = sessions.find(s => s.scheduled_start && s.scheduled_end && new Date(s.scheduled_start) < new Date(date.getTime()+duration*60000) && new Date(s.scheduled_end) > date && (s.learner_id === userId || s.helper_id === userId || s.learner_id === partner?.user_id || s.helper_id === partner?.user_id)); return <button key={d.toISOString()} type="button" disabled={!!booked} aria-label={`${formatDate(d.toISOString())} ${String(hour).padStart(2,"0")}:00 ${mine && theirs ? "cả hai rảnh" : theirs ? "bạn đồng hành rảnh" : "chọn giờ"}`} className={`calendar-slot ${mine ? "free-me" : ""} ${theirs ? "free-partner" : ""} ${mine && theirs ? "free-both" : ""} ${chosen === date.toISOString() ? "chosen" : ""}`} onClick={() => pick(d,hour)}>{booked ? <small>Đã có lịch học</small> : <>{theirs && <Avatar seed={partner!.user_id} size={25}/>}<small>{mine && theirs ? "Cùng rảnh" : mine ? "Bạn rảnh" : theirs ? "Bạn ấy rảnh" : ""}</small>{chosen === date.toISOString() && <b>✓</b>}</>}</button>; })}</div>)}</div></div><small>Lịch rảnh lấy từ hồ sơ · Chọn ô lịch để điền giờ đặt phiên.</small></section>;
+}

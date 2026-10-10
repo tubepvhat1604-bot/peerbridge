@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Kiến trúc PeerBridge</title>
+  <desc id="desc">Học viên và Admin dùng giao diện Next.js trên Vercel. Giao diện gọi FastAPI trên Render qua REST và WebSocket. FastAPI giữ nghiệp vụ: ghép cặp, kế hoạch tuần, check-in, đo nhịp học và coach, phòng học, Admin. Các phần AI chạy bằng LangGraph và OpenAI gpt-4.1-mini với một trần chi phí chung. Dữ liệu nằm trong SQLite, sao lưu tùy chọn bằng Litestream. RAG dùng BM25 trên tài liệu môn học.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#15333a" flood-opacity=".09"/></filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f8f4"/><stop offset="1" stop-color="#edf4ef"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#183940"/><stop offset="1" stop-color="#245d58"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8Z" fill="#5f8179"/></marker>
+    <style>
+      .label{font:700 14px Manrope,Arial,sans-serif;letter-spacing:1.5px}.title{font:700 24px Georgia,serif;fill:#17343a}.body{font:500 14px Manrope,Arial,sans-serif;fill:#667b77}.small{font:700 13px Manrope,Arial,sans-serif;fill:#3f6058}.tiny{font:500 12px Manrope,Arial,sans-serif;fill:#667b77}.flow{fill:none;stroke:#64827b;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1440" height="900" rx="32" fill="url(#bg)"/>
+  <circle cx="1320" cy="70" r="190" fill="#dceee4" opacity=".7"/><circle cx="80" cy="830" r="160" fill="#f3e7c8" opacity=".55"/>
+  <text x="64" y="67" class="label" fill="#3d876e">SYSTEM DESIGN · PEERBRIDGE</text>
+  <text x="64" y="112" class="title" font-size="38">Hai người cùng nhịp, AI giữ nhịp giúp.</text>
+  <text x="64" y="140" class="body">Code giữ quyết định, AI chỉ đề xuất. Mọi phần AI có đường lùi bằng luật khi lỗi hoặc hết trần chi phí.</text>
+
+  <!-- Người dùng -->
+  <g filter="url(#shadow)"><rect x="64" y="204" width="212" height="188" rx="22" fill="#fffefa" stroke="#d9e4dd"/></g>
+  <circle cx="126" cy="268" r="31" fill="#dceee6"/><path d="M112 290c4-18 24-18 28 0M126 260a9 9 0 1 0 0-18 9 9 0 0 0 0 18" fill="none" stroke="#2c755f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="214" cy="268" r="31" fill="#e5edf7"/><path d="M200 290c4-18 24-18 28 0M214 260a9 9 0 1 0 0-18 9 9 0 0 0 0 18" fill="none" stroke="#486c87" stroke-width="3" stroke-linecap="round"/>
+  <text x="170" y="330" text-anchor="middle" class="title">Người dùng</text><text x="170" y="355" text-anchor="middle" class="body">Học viên · Admin</text>
+  <path d="M276 298H345" class="flow"/><rect x="285" y="272" width="52" height="20" rx="10" fill="#edf4ef"/><text x="311" y="286" text-anchor="middle" class="tiny" font-size="10">HTTPS</text>
+
+  <!-- Giao diện -->
+  <g filter="url(#shadow)"><rect x="354" y="172" width="284" height="252" rx="24" fill="url(#dark)"/></g>
+  <rect x="384" y="204" width="224" height="56" rx="13" fill="#fff" fill-opacity=".12"/><text x="496" y="228" text-anchor="middle" class="label" fill="#aee0cd">GIAO DIỆN · VERCEL</text><text x="496" y="248" text-anchor="middle" class="small" fill="#fff">Next.js 16 · React 19 · PWA</text>
+  <g class="small" fill="#d7e7e2"><text x="386" y="294">Tìm bạn học · Kết nối</text><text x="386" y="322">Kế hoạch tuần · Tổng quan</text><text x="386" y="350">Check-in bằng ảnh</text><text x="386" y="378">Phòng học realtime</text><text x="386" y="406">Admin</text></g>
+  <path d="M638 298H720" class="flow"/><text x="679" y="282" text-anchor="middle" class="tiny">REST</text><text x="679" y="320" text-anchor="middle" class="tiny">WebSocket</text>
+
+  <!-- Backend -->
+  <g filter="url(#shadow)"><rect x="730" y="172" width="646" height="368" rx="26" fill="#fffefa" stroke="#d4e2da"/></g>
+  <text x="766" y="210" class="label" fill="#3d876e">NGHIỆP VỤ · RENDER</text><text x="766" y="243" class="title">FastAPI Backend</text><text x="766" y="268" class="body">/api/v1 · JWT · phân quyền học viên và Admin</text>
+  <g>
+    <rect x="765" y="295" width="176" height="72" rx="14" fill="#e9f4ee"/><text x="783" y="322" class="small">GHÉP CẶP</text><text x="783" y="344" class="tiny">Điểm máy + AI xếp lại</text>
+    <rect x="958" y="295" width="176" height="72" rx="14" fill="#eef3f8"/><text x="976" y="322" class="small">KẾ HOẠCH TUẦN</text><text x="976" y="344" class="tiny">AI chia việc, code xếp lịch</text>
+    <rect x="1151" y="295" width="190" height="72" rx="14" fill="#f7eed5"/><text x="1169" y="322" class="small">CHECK-IN ẢNH</text><text x="1169" y="344" class="tiny">AI Vision gắn việc đã xong</text>
+    <rect x="765" y="381" width="176" height="72" rx="14" fill="#f0ebf6"/><text x="783" y="408" class="small">NHỊP HỌC · COACH</text><text x="783" y="430" class="tiny">Pacing, chuỗi ngày, nhắc</text>
+    <rect x="958" y="381" width="176" height="72" rx="14" fill="#e9f4ee"/><text x="976" y="408" class="small">PHÒNG HỌC</text><text x="976" y="430" class="tiny">Chat, tóm tắt phiên</text>
+    <rect x="1151" y="381" width="190" height="72" rx="14" fill="#f8e5e0"/><text x="1169" y="408" class="small">ADMIN</text><text x="1169" y="430" class="tiny">Kiểm duyệt, chấm phiên</text>
+  </g>
+  <rect x="765" y="477" width="576" height="32" rx="14" fill="#1e4d4f"/><text x="1053" y="498" text-anchor="middle" class="small" fill="#e8f5ef">Trần chi phí AI chung mỗi ngày · hết trần thì dùng luật và mẫu</text>
+
+  <!-- AI -->
+  <g filter="url(#shadow)"><rect x="354" y="600" width="430" height="230" rx="24" fill="#fffefa" stroke="#d4e2da"/></g>
+  <text x="386" y="637" class="label" fill="#3d876e">AI · LANGGRAPH</text><text x="386" y="670" class="title">OpenAI gpt-4.1-mini</text>
+  <g class="small">
+    <rect x="386" y="690" width="176" height="36" rx="10" fill="#f7eed5"/><text x="474" y="713" text-anchor="middle">AI Vision check-in</text>
+    <rect x="576" y="690" width="176" height="36" rx="10" fill="#f8e5e0"/><text x="664" y="713" text-anchor="middle">Moderator Socratic</text>
+    <rect x="386" y="736" width="176" height="36" rx="10" fill="#eef3f8"/><text x="474" y="759" text-anchor="middle">Chia việc · Coach</text>
+    <rect x="576" y="736" width="176" height="36" rx="10" fill="#e9f4ee"/><text x="664" y="759" text-anchor="middle">Xếp hạng · Chấm phiên</text>
+  </g>
+  <text x="386" y="806" class="tiny">Trả JSON có kiểm tra schema · không chắc thì hỏi lại người dùng</text>
+  <path d="M1000 540v30H570v20" class="flow"/>
+
+  <!-- Dữ liệu -->
+  <g filter="url(#shadow)"><rect x="820" y="600" width="250" height="230" rx="24" fill="#1d4549"/></g>
+  <text x="852" y="637" class="label" fill="#aee0cd">DỮ LIỆU</text><text x="852" y="672" class="title" fill="#fff">SQLite</text>
+  <g class="tiny" fill="#d9e8e3"><text x="852" y="706" fill="#d9e8e3">Hồ sơ · Cặp · Kế hoạch</text><text x="852" y="730" fill="#d9e8e3">Check-in và ảnh · Số đo</text><text x="852" y="754" fill="#d9e8e3">Phòng học · Kiểm duyệt</text></g>
+  <rect x="852" y="776" width="186" height="30" rx="10" fill="#fff" fill-opacity=".12"/><text x="945" y="796" text-anchor="middle" class="tiny" fill="#e8f5ef">Litestream sao lưu S3</text>
+  <path d="M945 540v50" class="flow"/>
+
+  <!-- RAG -->
+  <g filter="url(#shadow)"><rect x="1106" y="600" width="270" height="230" rx="24" fill="#fffefa" stroke="#d4e2da"/></g>
+  <text x="1138" y="637" class="label" fill="#8b6d2b">RAG PHÒNG HỌC</text><text x="1138" y="672" class="title">BM25 cục bộ</text>
+  <text x="1138" y="702" class="tiny">Tài liệu môn học dạng markdown,</text><text x="1138" y="722" class="tiny">mỗi slide một đoạn</text>
+  <rect x="1138" y="744" width="206" height="40" rx="10" fill="#f5ecd2"/><text x="1241" y="769" text-anchor="middle" class="small">"(Xem bài …, slide N)"</text>
+  <path d="M1240 540v50" class="flow"/>
+
+  <rect x="64" y="856" width="1312" height="1" fill="#cedbd4"/><text x="64" y="878" class="tiny" font-size="11">Next.js (Vercel) → FastAPI (Render) → LangGraph + OpenAI · SQLite là nguồn dữ liệu chính · RAG chỉ đọc tài liệu môn học</text><text x="1376" y="878" text-anchor="end" class="small" font-size="12">PEERBRIDGE · 10/2026</text>
+</svg>

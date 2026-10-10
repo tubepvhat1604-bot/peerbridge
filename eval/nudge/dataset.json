@@ -1,0 +1,28 @@
+{
+  "synthetic": true,
+  "description": "Boundary fixture only: SENT acknowledgements, personas and timestamps are fabricated test inputs, never pilot evidence.",
+  "as_of": "2030-01-10T12:00:00+00:00",
+  "interventions": [
+    {"id":"fixture-ai-response","pair_id":1,"user_id":101,"variant":"ai","action":"reminder","delivery_status":"SENT","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"SENT","created_at":"2030-01-09T10:00:00+00:00"}]},
+    {"id":"fixture-template-late","pair_id":2,"user_id":201,"variant":"template","action":"reminder","delivery_status":"SENT","created_at":"2030-01-09T11:00:00+00:00","attempts":[{"status":"SENT","created_at":"2030-01-09T11:00:00+00:00"}]},
+    {"id":"fixture-ai-immature","pair_id":3,"user_id":301,"variant":"ai","action":"reminder","delivery_status":"SENT","created_at":"2030-01-10T10:00:00+00:00","attempts":[{"status":"SENT","created_at":"2030-01-10T10:00:00+00:00"}]},
+    {"id":"fixture-ai-replay","pair_id":4,"user_id":401,"variant":"ai","action":"reminder","delivery_status":"SENT","created_at":"2030-01-09T09:00:00+00:00","attempts":[{"status":"SENT","created_at":"2030-01-09T09:00:00+00:00"}]},
+    {"id":"fixture-simulated","pair_id":5,"user_id":501,"variant":"template","action":"reminder","delivery_status":"SIMULATED","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"SIMULATED","created_at":"2030-01-09T10:00:00+00:00"}]},
+    {"id":"fixture-queued","pair_id":6,"user_id":601,"variant":"ai","action":"reminder","delivery_status":"PENDING","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"PENDING","created_at":"2030-01-09T10:00:00+00:00"}]},
+    {"id":"fixture-no-adapter","pair_id":7,"user_id":701,"variant":"template","action":"reminder","delivery_status":"NOT_CONFIGURED","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"NOT_CONFIGURED","created_at":"2030-01-09T10:00:00+00:00"}]},
+    {"id":"fixture-failed","pair_id":8,"user_id":801,"variant":"ai","action":"reminder","delivery_status":"FAILED","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"FAILED","created_at":"2030-01-09T10:00:00+00:00"}]},
+    {"id":"fixture-reserved","pair_id":9,"user_id":901,"variant":"ai","action":"reminder","delivery_status":"RESERVED","created_at":"2030-01-09T10:00:00+00:00","attempts":[]},
+    {"id":"fixture-future","pair_id":10,"user_id":1001,"variant":"template","action":"reminder","delivery_status":"SENT","created_at":"2030-01-10T13:00:00+00:00","attempts":[{"status":"SENT","created_at":"2030-01-10T13:00:00+00:00"}]},
+    {"id":"fixture-quiet","pair_id":11,"user_id":1101,"variant":"template","action":"reminder","delivery_status":"SUPPRESSED_QUIET_HOURS","created_at":"2030-01-09T10:00:00+00:00","attempts":[{"status":"SUPPRESSED_QUIET_HOURS","created_at":"2030-01-09T10:00:00+00:00"}]}
+  ],
+  "completions": [
+    {"item_id":"fixture-item-response","pair_id":1,"user_id":101,"completed_at":"2030-01-09T11:00:00+00:00"},
+    {"item_id":"fixture-item-late","pair_id":2,"user_id":201,"completed_at":"2030-01-10T12:00:00+00:00"},
+    {"item_id":"fixture-item-early","pair_id":3,"user_id":301,"completed_at":"2030-01-10T11:00:00+00:00"},
+    {"item_id":"fixture-item-replay","pair_id":4,"user_id":401,"completed_at":"2030-01-09T08:00:00+00:00"}
+  ],
+  "completion_events": [
+    {"event_id":"fixture-original","item_id":"fixture-item-replay","confirmed_at":"2030-01-09T08:00:00+00:00"},
+    {"event_id":"fixture-replay","item_id":"fixture-item-replay","confirmed_at":"2030-01-09T10:00:00+00:00"}
+  ]
+}
